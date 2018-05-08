@@ -15,13 +15,22 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const allCrawlData = new FilmsDataHandler(mockData)
-    const randomlyChosenCrawl = 
-      allCrawlData.data[Math.floor(Math.random() * allCrawlData.data.length)]
-    this.setState({
-      loading: false,
-      openingCrawlData: randomlyChosenCrawl
-    })
+    let allCrawlData
+    let randomlyChosenCrawl
+    fetch(`https://swapi.co/api/films/`)
+      .then(data => data.json())
+      .then(parsedData => {
+        allCrawlData = new FilmsDataHandler(parsedData)
+        randomlyChosenCrawl =
+          allCrawlData.data[Math.floor(Math.random() * allCrawlData.data.length)]
+        this.setState({
+          loading: false,
+          openingCrawlData: randomlyChosenCrawl
+        })
+      })
+      .catch(err => {
+        console.log(err, 'oops')
+      })
   }
 
   render() {
