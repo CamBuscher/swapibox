@@ -35,7 +35,7 @@ class App extends Component {
 
   render() {
     const loadingCheck = this.state.loading ? 
-      `Loading...` :
+      <img src='/images/chewy.gif' /> :
       <OpeningCrawl crawlInfo={this.state.openingCrawlData} />
 
     return (
