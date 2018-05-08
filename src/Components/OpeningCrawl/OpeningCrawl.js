@@ -6,7 +6,7 @@ const OpeningCrawl = ({crawlInfo}) => {
     <div>
       <h4>{crawlInfo.crawl}</h4>
       <p>{crawlInfo.title}</p>
-      <p>{crawlInfo.release_date}</p>
+      <p>Release date: {crawlInfo.release_date}</p>
     </div>
   )
 }
