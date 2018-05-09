@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import mockData from '../../Data/Mock'
 import FilmsDataHandler from '../../Helpers/FilmsDataHandler'
 import OpeningCrawl from '../OpeningCrawl/OpeningCrawl'
+import Loading from '../Loading/Loading'
 import './App.css';
 
 class App extends Component {
@@ -35,7 +36,7 @@ class App extends Component {
 
   render() {
     const loadingCheck = this.state.loading ? 
-      <img src='/images/chewy.gif' /> :
+      <Loading /> :
       <OpeningCrawl crawlInfo={this.state.openingCrawlData} />
 
     return (

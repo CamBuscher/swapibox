@@ -2,6 +2,18 @@ h4 {
   margin-top: 0px;
 }
 
+.stop-crawl {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 100px;
+  height: 75px;
+  border: 2px dashed #feda4a;
+  background-color: transparent;
+  color: #feda4a;
+  font-size: 24px;
+}
+
 .fade {
   position: relative;
   width: 100%;
