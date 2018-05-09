@@ -2,6 +2,8 @@ import React from 'react'
 import './OpeningCrawl.css'
 
 const OpeningCrawl = ({crawlInfo, closeCrawl}) => {
+  setTimeout(closeCrawl, 45000);
+  
   return (
     <section className='star-wars'>
       <button 
