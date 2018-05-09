@@ -4,6 +4,7 @@ import FilmsDataHandler from '../../Helpers/FilmsDataHandler'
 import OpeningCrawl from '../OpeningCrawl/OpeningCrawl'
 import Loading from '../Loading/Loading'
 import MainPage from '../MainPage/MainPage'
+import { callPeopleEndpoint } from '../../APIcalls'
 import './App.css';
 
 class App extends Component {
@@ -14,7 +15,7 @@ class App extends Component {
       loading: true,
       openingCrawlData: null,
       openingCrawlDisplayed: true,
-      arrayOfPeople: [],
+      cards: [],
       favorites: []
     }
   }
@@ -23,41 +24,10 @@ class App extends Component {
     this.setState({openingCrawlDisplayed : false})
   }
 
-  callPeopleEndpoint = async () => {
-    const response = await fetch('https://swapi.co/api/people')
-    const peopleData = await response.json()
-    const arrayOfPeople = await this.makePeopleObjects(peopleData.results)
+  findPeople = async () => {
+    const arrayOfPeople = await callPeopleEndpoint()
 
-    this.setState({arrayOfPeople})
-  }
-
-  async makePeopleObjects(peopleArray) {
-    const people = peopleArray.map(async person => {
-      const species = await this.fetchSpecies(person.species)
-      const homeworld = await this.fetchHomeworldData(person.homeworld)
-      return {
-        ...homeworld,
-        species,
-        name: person.name
-      }
-    })
-
-    return Promise.all(people)
-  }
-
-  async fetchSpecies(speciesEndpoint) {
-    const speciesResponse = await fetch(speciesEndpoint)
-    const species = await speciesResponse.json()
-    return species.name
-  }
-
-  async fetchHomeworldData(homeworldEndpoint) {
-    const homeworldResponse = await fetch(homeworldEndpoint)
-    const homeworld = await homeworldResponse.json()
-    return {
-      homeworld: homeworld.name,
-      homeworldPop: homeworld.population
-    }
+    this.setState({ cards: arrayOfPeople})
   }
 
   componentDidMount() {
@@ -78,7 +48,7 @@ class App extends Component {
         console.log(err, 'oops')
       })
 
-    this.callPeopleEndpoint()
+    this.findPeople()
 
   }
   
