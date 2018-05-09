@@ -4,7 +4,7 @@ import './MainPage.css'
 
 const MainPage = ({favorites}) => {
   return (
-    <div>
+    <div className='mainPage'>
       <header>
         <h1>Swapibox</h1>
         <button className="favorites"> Favorites {favorites.length} </button>
