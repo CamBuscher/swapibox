@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import mockData from '../../Data/Mock'
 import FilmsDataHandler from '../../Helpers/FilmsDataHandler'
 import OpeningCrawl from '../OpeningCrawl/OpeningCrawl'
+import Loading from '../Loading/Loading'
+import MainPage from '../MainPage/MainPage'
 import './App.css';
 
 class App extends Component {
@@ -10,8 +12,15 @@ class App extends Component {
 
     this.state = {
       loading: true,
-      openingCrawlData: null
+      openingCrawlData: null,
+      openingCrawlDisplayed: true,
+      cards: [],
+      favorites: []
     }
+  }
+
+  closeCrawl = () => {
+    this.setState({openingCrawlDisplayed : false})
   }
 
   componentDidMount() {
@@ -34,9 +43,22 @@ class App extends Component {
   }
 
   render() {
+    const determineRender = () => {
+      if (this.state.openingCrawlDisplayed === true) {
+        return <OpeningCrawl 
+          crawlInfo={this.state.openingCrawlData}
+          closeCrawl={this.closeCrawl} 
+        />
+      } else {
+        return <MainPage 
+          favorites={this.state.favorites}
+        />
+      }
+    }
+
     const loadingCheck = this.state.loading ? 
-      <img src='/images/chewy.gif' /> :
-      <OpeningCrawl crawlInfo={this.state.openingCrawlData} />
+      <Loading /> :
+      determineRender()
 
     return (
       <div className="App">
