@@ -11,8 +11,13 @@ class App extends Component {
 
     this.state = {
       loading: true,
-      openingCrawlData: null
+      openingCrawlData: null,
+      openingCrawlDisplayed: true
     }
+  }
+
+  closeCrawl = () => {
+    this.setState({openingCrawlDisplayed : false})
   }
 
   componentDidMount() {
@@ -35,9 +40,20 @@ class App extends Component {
   }
 
   render() {
+    const determineRender = () => {
+      if (this.state.openingCrawlDisplayed === true) {
+        return <OpeningCrawl 
+          crawlInfo={this.state.openingCrawlData}
+          closeCrawl={this.closeCrawl} 
+        />
+      } else {
+        return <p> whoops </p>
+      }
+    }
+
     const loadingCheck = this.state.loading ? 
       <Loading /> :
-      <OpeningCrawl crawlInfo={this.state.openingCrawlData} />
+      determineRender()
 
     return (
       <div className="App">

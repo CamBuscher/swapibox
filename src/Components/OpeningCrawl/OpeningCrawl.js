@@ -1,10 +1,13 @@
 import React from 'react'
 import './OpeningCrawl.css'
 
-const OpeningCrawl = ({crawlInfo}) => {
+const OpeningCrawl = ({crawlInfo, closeCrawl}) => {
   return (
     <section className='star-wars'>
-      <button className='stop-crawl'>Exit</button>
+      <button 
+        className='stop-crawl'
+        onClick={closeCrawl}
+      >Exit</button>
       <div className='crawl'>
         <h4>{crawlInfo.crawl}</h4>
         <div className='title'>
