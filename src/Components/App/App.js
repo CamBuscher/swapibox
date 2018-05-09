@@ -3,6 +3,7 @@ import mockData from '../../Data/Mock'
 import FilmsDataHandler from '../../Helpers/FilmsDataHandler'
 import OpeningCrawl from '../OpeningCrawl/OpeningCrawl'
 import Loading from '../Loading/Loading'
+import MainPage from '../MainPage/MainPage'
 import './App.css';
 
 class App extends Component {
@@ -12,7 +13,9 @@ class App extends Component {
     this.state = {
       loading: true,
       openingCrawlData: null,
-      openingCrawlDisplayed: true
+      openingCrawlDisplayed: true,
+      cards: [],
+      favorites: []
     }
   }
 
@@ -47,7 +50,9 @@ class App extends Component {
           closeCrawl={this.closeCrawl} 
         />
       } else {
-        return <p> whoops </p>
+        return <MainPage 
+
+        />
       }
     }
 
