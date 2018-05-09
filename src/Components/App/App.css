@@ -1,2 +1,7 @@
 .App {
-  text-align: center; }
+  text-align: center;
+  background: url("/images/stars.jpg");
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 0px;
+  height: 100vh; }
