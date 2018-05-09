@@ -1,3 +1,14 @@
+import FilmsDataHandler from "./Helpers/FilmsDataHandler";
+
+// Opening Crawl
+const getOpeningCrawl = async () => {
+  const response = await fetch('https://swapi.co/api/films/')
+  const data = await response.json()
+  const allCrawlData = await new FilmsDataHandler(data)
+  return allCrawlData.data[Math.floor(Math.random() * allCrawlData.data.length)];
+}
+
+// People API endpoint
 const callPeopleEndpoint = async () => {
   const response = await fetch('https://swapi.co/api/people')
   const peopleData = await response.json()
@@ -36,5 +47,6 @@ const fetchHomeworldData = async (homeworldEndpoint) => {
 }
 
 export {
+  getOpeningCrawl,
   callPeopleEndpoint
 }

@@ -4,7 +4,7 @@ import FilmsDataHandler from '../../Helpers/FilmsDataHandler'
 import OpeningCrawl from '../OpeningCrawl/OpeningCrawl'
 import Loading from '../Loading/Loading'
 import MainPage from '../MainPage/MainPage'
-import { callPeopleEndpoint } from '../../APIcalls'
+import { getOpeningCrawl, callPeopleEndpoint } from '../../APIcalls'
 import './App.css';
 
 class App extends Component {
@@ -20,38 +20,23 @@ class App extends Component {
     }
   }
 
+  getCrawl = async () => {
+    const openingCrawlData = await getOpeningCrawl()
+    this.setState({loading: false, openingCrawlData})
+  }
+
   closeCrawl = () => {
     this.setState({openingCrawlDisplayed : false})
   }
 
   findPeople = async () => {
     const arrayOfPeople = await callPeopleEndpoint()
-
-    this.setState({ cards: arrayOfPeople})
+    this.setState({ cards: arrayOfPeople })
   }
 
   componentDidMount() {
-    let allCrawlData
-    let randomlyChosenCrawl
-    fetch(`https://swapi.co/api/films/`)
-      .then(data => data.json())
-      .then(parsedData => {
-        allCrawlData = new FilmsDataHandler(parsedData)
-        randomlyChosenCrawl =
-          allCrawlData.data[Math.floor(Math.random() * allCrawlData.data.length)]
-        this.setState({
-          loading: false,
-          openingCrawlData: randomlyChosenCrawl
-        })
-      })
-      .catch(err => {
-        console.log(err, 'oops')
-      })
-
-    this.findPeople()
-
+    this.getCrawl()
   }
-  
 
   render() {
     const determineRender = () => {
