@@ -37,6 +37,15 @@ const CardDisplay = ({cards}) => {
         <p>Terrain: {obj.terrain}</p>
         {residents()}
       </div>;
+      
+    } else if (obj.class) {
+      return <div className="card vehiclesCard">
+          <h3>{obj.name}</h3>
+          <h5>Model: {obj.model}</h5>
+          <button> Favorite </button>
+          <p>Number of passengers: {obj.numPassengers}</p>
+          <p>Class: {obj.class} </p>
+        </div>;
     }
   }
 

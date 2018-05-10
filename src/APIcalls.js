@@ -96,7 +96,7 @@ const makeVehiclesObjects = async vehiclesArray => {
     return { 
       name: vehicle.name, 
       model: vehicle.model, 
-      class: vehicle_class,
+      class: vehicle.vehicle_class,
       numPassengers: vehicle.passengers
      };
   });
