@@ -4,7 +4,7 @@ import FilmsDataHandler from '../../Helpers/FilmsDataHandler'
 import OpeningCrawl from '../OpeningCrawl/OpeningCrawl'
 import Loading from '../Loading/Loading'
 import MainPage from '../MainPage/MainPage'
-import { getOpeningCrawl, callPeopleEndpoint } from '../../APIcalls'
+import { getOpeningCrawl, callPeopleEndpoint, callPlanetsEndpoint } from '../../APIcalls'
 import './App.css';
 
 class App extends Component {
@@ -34,6 +34,11 @@ class App extends Component {
     this.setState({ cards: arrayOfPeople })
   }
 
+  findPlanets = async () => {
+    const arrayOfPlanets = await callPlanetsEndpoint()
+    this.setState({ cards: arrayOfPlanets })
+  }
+
   componentDidMount() {
     this.getCrawl()
   }
@@ -49,6 +54,7 @@ class App extends Component {
         return <MainPage 
           favorites={this.state.favorites}
           findPeople={this.findPeople}
+          findPlanets={this.findPlanets}
           cards={this.state.cards}
         />
       }

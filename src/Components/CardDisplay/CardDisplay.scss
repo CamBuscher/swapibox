@@ -3,7 +3,8 @@
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between
+  justify-content: space-between;
+  padding: 20px 0px;
 }
 
 .cardDisplay h3 {
@@ -11,6 +12,7 @@
 }
 
 .card {
+  margin: 10px 0px;
   border: 1px solid #feda4a;
   background-color: #ffffff50;
   width: 200px;

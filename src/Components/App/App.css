@@ -3,4 +3,5 @@
   background: url("/images/stars.jpg");
   background-size: cover;
   box-sizing: border-box;
-  padding: 0px; }
+  padding: 0px;
+  min-height: 100vh; }

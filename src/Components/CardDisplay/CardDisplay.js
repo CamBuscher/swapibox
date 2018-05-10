@@ -15,6 +15,28 @@ const CardDisplay = ({cards}) => {
         <p>Homeworld: {obj.homeworld}</p>
         <p>Population: {obj.homeworldPop}</p>
       </div>
+
+    } else if (obj.residents) {
+      const residents = () => {
+        if (obj.residents.length) {
+          return <div>
+            <p>Notable residents:</p>
+            <ul>
+              {obj.residents.map(resident => <li>{resident}</li>)}
+            </ul>
+          </div>
+        } else {
+          return <p> No notable resients </p>
+        }
+      }
+      return <div className="card planetsCard">
+        <h3>{obj.name}</h3>
+        <h4>Population: {obj.population}</h4>
+        <button> Favorite </button>
+        <p>Climate: {obj.climate}</p>
+        <p>Terrain: {obj.terrain}</p>
+        {residents()}
+      </div>;
     }
   }
 
