@@ -2,7 +2,7 @@ import React from 'react'
 import CardDisplay from '../CardDisplay/CardDisplay'
 import './MainPage.css'
 
-const MainPage = ({favorites}) => {
+const MainPage = ({favorites, findPeople, findPlanets, findVehicles, cards}) => {
   return (
     <div className='mainPage'>
       <header>
@@ -10,11 +10,13 @@ const MainPage = ({favorites}) => {
         <button className="favorites"> Favorites {favorites.length} </button>
       </header>
       <div className='buttonContainer'>
-        <button> People </button>
-        <button> Planets </button>
-        <button> Vehicles </button>
+        <button onClick={findPeople}> People </button>
+        <button onClick={findPlanets}> Planets </button>
+        <button onClick={findVehicles}> Vehicles </button>
       </div>
-      <CardDisplay />
+      <CardDisplay 
+        cards={cards}
+      />
     </div>
   )
 }
