@@ -4,7 +4,12 @@ import FilmsDataHandler from '../../Helpers/FilmsDataHandler'
 import OpeningCrawl from '../OpeningCrawl/OpeningCrawl'
 import Loading from '../Loading/Loading'
 import MainPage from '../MainPage/MainPage'
-import { getOpeningCrawl, callPeopleEndpoint, callPlanetsEndpoint } from '../../APIcalls'
+import { 
+  getOpeningCrawl, 
+  callPeopleEndpoint, 
+  callPlanetsEndpoint, 
+  callVehiclesEndpoint 
+} from '../../APIcalls'
 import './App.css';
 
 class App extends Component {
@@ -37,6 +42,10 @@ class App extends Component {
   findPlanets = async () => {
     const arrayOfPlanets = await callPlanetsEndpoint()
     this.setState({ cards: arrayOfPlanets })
+  }
+
+  findVehicles = async () => {
+    const arrayOfVehicles = await callVehiclesEndpoint
   }
 
   componentDidMount() {

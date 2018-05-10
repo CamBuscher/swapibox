@@ -81,8 +81,32 @@ const fetchResidents = async residentsEndpointsArray => {
   return Promise.all(residents)
 };
 
+// Vehicles API endpoint 
+
+const callVehiclesEndpoint = async () => {
+  const response = await fetch('https://swapi.co/api/vehicles')
+  const vehiclesData = await response.json()
+  const arrayOfVehicles = await makeVehiclesObjects(vehiclesData.results)
+
+  return arrayOfVehicles
+}
+
+const makeVehiclesObjects = async vehiclesArray => {
+  const vehicles = vehiclesArray.map(async vehicle => {
+    return { 
+      name: vehicle.name, 
+      model: vehicle.model, 
+      class: vehicle_class,
+      numPassengers: vehicle.passengers
+     };
+  });
+
+  return Promise.all(vehicles);
+};
+
 export {
   getOpeningCrawl,
   callPeopleEndpoint,
-  callPlanetsEndpoint
-}
+  callPlanetsEndpoint,
+  callVehiclesEndpoint
+};
