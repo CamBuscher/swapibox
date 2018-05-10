@@ -46,6 +46,7 @@ class App extends Component {
 
   findVehicles = async () => {
     const arrayOfVehicles = await callVehiclesEndpoint
+    this.setState({ cards: arrayOfVehicles });
   }
 
   componentDidMount() {
@@ -64,6 +65,7 @@ class App extends Component {
           favorites={this.state.favorites}
           findPeople={this.findPeople}
           findPlanets={this.findPlanets}
+          findVehicles={this.findVehicles}
           cards={this.state.cards}
         />
       }
