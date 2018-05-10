@@ -8,8 +8,12 @@ const CardDisplay = ({cards}) => {
 
   function determineCardType(obj) {
     if(obj.homeworld) {
-      return <div className='card'>
-        <h5>{obj.name}</h5>
+      return <div className='card peopleCard'>
+        <h3>{obj.name}</h3>
+        <h4>{obj.species}</h4>
+        <button> Favorite </button>
+        <p>Homeworld: {obj.homeworld}</p>
+        <p>Population: {obj.homeworldPop}</p>
       </div>
     }
   }
