@@ -48,6 +48,8 @@ class App extends Component {
       } else {
         return <MainPage 
           favorites={this.state.favorites}
+          findPeople={this.findPeople}
+          cards={this.state.cards}
         />
       }
     }

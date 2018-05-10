@@ -1,3 +1,17 @@
+.cardDisplay {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between
+}
+
 .cardDisplay h3 {
   color: #feda4a;
+}
+
+.card {
+  border: 1px solid #feda4a;
+  background-color: #ffffff50;
+  width: 200px;
 }
