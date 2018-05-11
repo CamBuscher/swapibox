@@ -2,12 +2,12 @@ import React from 'react'
 import CardDisplay from '../CardDisplay/CardDisplay'
 import './MainPage.css'
 
-const MainPage = ({favorites, findPeople, findPlanets, findVehicles, cards}) => {
+const MainPage = ({numFavorites, displayFavorites, findPeople, findPlanets, findVehicles, cards, toggleFavorite}) => {
   return (
     <div className='mainPage'>
       <header>
         <h1>Swapibox</h1>
-        <button className="favorites"> Favorites {favorites.length} </button>
+        <button className="favorites" onClick={displayFavorites}> Favorites : {numFavorites} </button>
       </header>
       <div className='buttonContainer'>
         <button onClick={findPeople}> People </button>
@@ -16,6 +16,7 @@ const MainPage = ({favorites, findPeople, findPlanets, findVehicles, cards}) => 
       </div>
       <CardDisplay 
         cards={cards}
+        toggleFavorite={toggleFavorite}
       />
     </div>
   )

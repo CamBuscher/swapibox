@@ -49,6 +49,20 @@ class App extends Component {
     this.setState({ cards: arrayOfVehicles });
   }
 
+  toggleFavorite = (obj) => {
+    if (this.state.favorites.find(favorite => favorite.name === obj.name)) {
+      const newFavorites = this.state.favorites.filter(favorite => favorite.name !== obj.name)
+      this.setState({ favorites: newFavorites })
+    } else {
+      const newFavorites = [...this.state.favorites, obj]
+      this.setState({ favorites: newFavorites })
+    }
+  }
+
+  displayFavorites = () => {
+    this.setState({ cards : this.state.favorites })
+  }
+
   componentDidMount() {
     this.getCrawl()
   }
@@ -62,10 +76,12 @@ class App extends Component {
         />
       } else {
         return <MainPage 
-          favorites={this.state.favorites}
           findPeople={this.findPeople}
           findPlanets={this.findPlanets}
           findVehicles={this.findVehicles}
+          toggleFavorite={this.toggleFavorite}
+          displayFavorites={this.displayFavorites}
+          numFavorites={this.state.favorites.length}
           cards={this.state.cards}
         />
       }
