@@ -59,6 +59,10 @@ class App extends Component {
     }
   }
 
+  displayFavorites = () => {
+    this.setState({ cards : this.state.favorites })
+  }
+
   componentDidMount() {
     this.getCrawl()
   }
@@ -76,6 +80,7 @@ class App extends Component {
           findPlanets={this.findPlanets}
           findVehicles={this.findVehicles}
           toggleFavorite={this.toggleFavorite}
+          displayFavorites={this.displayFavorites}
           numFavorites={this.state.favorites.length}
           cards={this.state.cards}
         />
