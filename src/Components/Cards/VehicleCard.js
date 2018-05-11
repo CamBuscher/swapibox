@@ -8,7 +8,7 @@ const VehicleCard = ({vehicle}) => {
       <button> Favorite </button>
       <p>Number of passengers: {vehicle.numPassengers}</p>
       <p>Class: {vehicle.class} </p>
-    </div>;
+    </div>
   )
 }
 
