@@ -52,6 +52,7 @@ class App extends Component {
   toggleFavorite = (obj) => {
     if (this.state.favorites.find(favorite => favorite.name === obj.name)) {
       const newFavorites = this.state.favorites.filter(favorite => favorite.name !== obj.name)
+      this.setState({ favorites: newFavorites })
     } else {
       const newFavorites = [...this.state.favorites, obj]
       this.setState({ favorites: newFavorites })
