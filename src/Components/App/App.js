@@ -72,11 +72,11 @@ class App extends Component {
         />
       } else {
         return <MainPage 
-          favorites={this.state.favorites}
           findPeople={this.findPeople}
           findPlanets={this.findPlanets}
           findVehicles={this.findVehicles}
           toggleFavorite={this.toggleFavorite}
+          numFavorites={this.state.favorites.length}
           cards={this.state.cards}
         />
       }
