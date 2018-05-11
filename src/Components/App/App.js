@@ -21,7 +21,8 @@ class App extends Component {
       openingCrawlData: null,
       openingCrawlDisplayed: true,
       cards: [],
-      favorites: []
+      favorites: [],
+      favoritesDisplayed: false
     }
   }
 
@@ -36,23 +37,24 @@ class App extends Component {
 
   findPeople = async () => {
     const arrayOfPeople = await callPeopleEndpoint()
-    this.setState({ cards: arrayOfPeople })
+    this.setState({ cards: arrayOfPeople, favoritesDisplayed: false })
   }
 
   findPlanets = async () => {
     const arrayOfPlanets = await callPlanetsEndpoint()
-    this.setState({ cards: arrayOfPlanets })
+    this.setState({ cards: arrayOfPlanets, favoritesDisplayed: false })
   }
 
   findVehicles = async () => {
     const arrayOfVehicles = await callVehiclesEndpoint()
-    this.setState({ cards: arrayOfVehicles });
+    this.setState({ cards: arrayOfVehicles, favoritesDisplayed: false });
   }
 
   toggleFavorite = (obj) => {
     if (this.state.favorites.find(favorite => favorite.name === obj.name)) {
       const newFavorites = this.state.favorites.filter(favorite => favorite.name !== obj.name)
       this.setState({ favorites: newFavorites })
+      this.state.favoritesDisplayed && this.setState({ cards: newFavorites })
     } else {
       const newFavorites = [...this.state.favorites, obj]
       this.setState({ favorites: newFavorites })
@@ -60,7 +62,7 @@ class App extends Component {
   }
 
   displayFavorites = () => {
-    this.setState({ cards : this.state.favorites })
+    this.setState({ cards : this.state.favorites, favoritesDisplayed: true })
   }
 
   componentDidMount() {
