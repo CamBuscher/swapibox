@@ -12,18 +12,10 @@ const CardDisplay = ({cards}) => {
   function determineCardType(obj) {
     if(obj.homeworld) {
       return <PeopleCard person={obj} />
-
     } else if (obj.residents) {
       return <PlanetCard planet={obj} />
-      
     } else if (obj.class) {
-      return <div className="card vehiclesCard">
-          <h3>{obj.name}</h3>
-          <h5>Model: {obj.model}</h5>
-          <button> Favorite </button>
-          <p>Number of passengers: {obj.numPassengers}</p>
-          <p>Class: {obj.class} </p>
-        </div>;
+      return <VehicleCard vehicle={obj} />
     }
   }
 
