@@ -11,7 +11,6 @@ const CardDisplay = ({cards, toggleFavorite, favorites}) => {
 
   function determineCardType(obj) {
     const isFavorite = favorites.find(favorite => favorite.name === obj.name) ? true : false
-    console.log(isFavorite)
     if(obj.homeworld) {
       return <PeopleCard person={obj} toggleFavorite={toggleFavorite} isFavorite={isFavorite} />
     } else if (obj.residents) {

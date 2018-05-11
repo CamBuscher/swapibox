@@ -2,7 +2,7 @@ import React from 'react'
 import CardDisplay from '../CardDisplay/CardDisplay'
 import './MainPage.css'
 
-const MainPage = ({favorites, displayFavorites, findPeople, findPlanets, findVehicles, cards, toggleFavorite}) => {
+const MainPage = ({ favorites, displayFavorites, findPeople, findPlanets, findVehicles, cards, toggleFavorite, displayedCategory }) => {
   return (
     <div className='mainPage'>
       <header>
