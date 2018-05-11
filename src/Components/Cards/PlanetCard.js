@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PlanetCard = ({planet}) => {
+const PlanetCard = ({planet, toggleFavorite}) => {
   const residents = () => {
     if (planet.residents.length) {
       return <div>
@@ -16,7 +16,7 @@ const PlanetCard = ({planet}) => {
   return <div className="card planetsCard">
     <h3>{planet.name}</h3>
     <h4>Population: {planet.population}</h4>
-    <button> Favorite </button>
+    <button onClick={() => toggleFavorite(planet)}> Favorite </button>
     <p>Climate: {planet.climate}</p>
     <p>Terrain: {planet.terrain}</p>
     {residents()}
