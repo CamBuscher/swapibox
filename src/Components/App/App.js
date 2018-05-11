@@ -81,7 +81,7 @@ class App extends Component {
           findVehicles={this.findVehicles}
           toggleFavorite={this.toggleFavorite}
           displayFavorites={this.displayFavorites}
-          displayedCategory={this.displayedCategory}
+          displayedCategory={this.state.displayedCategory}
           favorites={this.state.favorites}
           cards={this.state.cards}
         />
