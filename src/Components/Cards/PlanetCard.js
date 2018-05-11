@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PlanetCard = ({planet, toggleFavorite}) => {
+const PlanetCard = ({planet, toggleFavorite, isFavorite}) => {
   const favoriteIcon = isFavorite ?
     <img src='/images/fullStar.png' className='favoriteIcon' title='Click to add to favorites' onClick={() => toggleFavorite(person)} /> 
     :
