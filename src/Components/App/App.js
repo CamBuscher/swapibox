@@ -83,7 +83,7 @@ class App extends Component {
           findVehicles={this.findVehicles}
           toggleFavorite={this.toggleFavorite}
           displayFavorites={this.displayFavorites}
-          numFavorites={this.state.favorites.length}
+          favorites={this.state.favorites}
           cards={this.state.cards}
         />
       }
