@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import mockData from '../../Data/Mock'
-import FilmsDataHandler from '../../Helpers/FilmsDataHandler'
 import OpeningCrawl from '../OpeningCrawl/OpeningCrawl'
 import Loading from '../Loading/Loading'
 import MainPage from '../MainPage/MainPage'
