@@ -1,5 +1,6 @@
-import React from 'react'
-import './OpeningCrawl.css'
+import React from 'react';
+import './OpeningCrawl.css';
+import PropTypes from 'prop-types';
 
 const OpeningCrawl = ({crawlInfo, closeCrawl}) => {
   setTimeout(closeCrawl, 45000);
@@ -18,7 +19,12 @@ const OpeningCrawl = ({crawlInfo, closeCrawl}) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default OpeningCrawl
+OpeningCrawl.propTypes = {
+  crawlInfo: PropTypes.object.isRequired,
+  closeCrawl: PropTypes.func.isRequired
+};
+
+export default OpeningCrawl;
