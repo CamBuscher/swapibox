@@ -19,7 +19,7 @@ const VehicleCard = ({vehicle, toggleFavorite, isFavorite}) => {
 };
 
 VehicleCard.propTypes = {
-  vehicle: PropTypes.obj.isRequired,
+  vehicle: PropTypes.object.isRequired,
   toggleFavorite: PropTypes.func.isRequired,
   isFavorite: PropTypes.bool.isRequired
 };

@@ -19,7 +19,7 @@ const PeopleCard = ({person, toggleFavorite, isFavorite}) => {
 };
 
 PeopleCard.propTypes = {
-  person: PropTypes.obj.isRequired,
+  person: PropTypes.object.isRequired,
   toggleFavorite: PropTypes.func.isRequired,
   isFavorite: PropTypes.bool.isRequired
 };

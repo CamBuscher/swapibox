@@ -18,7 +18,7 @@ const PlanetCard = ({planet, toggleFavorite, isFavorite}) => {
     } else {
       return <p> No notable resients </p>;
     }
-  }
+  };
   return <div className="card planetsCard">
     <h3>{planet.name}</h3>
     <h4>Population: {planet.population}</h4>
@@ -27,10 +27,10 @@ const PlanetCard = ({planet, toggleFavorite, isFavorite}) => {
     <p>Terrain: {planet.terrain}</p>
     {residents()}
   </div>;
-}
+};
 
 PlanetCard.propTypes = {
-  planet: PropTypes.obj.isRequired,
+  planet: PropTypes.object.isRequired,
   toggleFavorite: PropTypes.func.isRequired,
   isFavorite: PropTypes.bool.isRequired
 };
