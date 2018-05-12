@@ -2,106 +2,145 @@ import FilmsDataHandler from "./Helpers/FilmsDataHandler";
 
 // Opening Crawl
 const getOpeningCrawl = async () => {
-  const response = await fetch('https://swapi.co/api/films/');
-  const data = await response.json();
-  const allCrawlData = await new FilmsDataHandler(data);
-  return allCrawlData.data[Math.floor(Math.random() * allCrawlData.data.length)];
+  try { 
+    const response = await fetch('https://swapi.co/api/films/');
+    const data = await response.json();
+    const allCrawlData = await new FilmsDataHandler(data);
+    return allCrawlData.data[Math.floor(Math.random() * allCrawlData.data.length)];
+  } catch (error) {
+    throw new Error(error);
+  }
 };
 
 // People API endpoint
 const callPeopleEndpoint = async () => {
-  const response = await fetch('https://swapi.co/api/people');
-  const peopleData = await response.json();
-  const arrayOfPeople = await makePeopleObjects(peopleData.results);
+  try {
+    const response = await fetch('https://swapi.co/api/people');
+    const peopleData = await response.json();
+    const arrayOfPeople = await makePeopleObjects(peopleData.results);
 
-  return arrayOfPeople;
+    return arrayOfPeople;
+  } catch (error) {
+    throw new Error(error);
+  }
 };
 
 const makePeopleObjects = async (peopleArray) => {
-  const people = peopleArray.map(async person => {
-    const species = await fetchSpecies(person.species);
-    const homeworld = await fetchHomeworldData(person.homeworld);
-    return {
-      ...homeworld,
-      species,
-      name: person.name
-    };
-  });
-
-  return Promise.all(people);
+  try {
+    const people = peopleArray.map(async person => {
+      const species = await fetchSpecies(person.species);
+      const homeworld = await fetchHomeworldData(person.homeworld);
+      return {
+        ...homeworld,
+        species,
+        name: person.name
+      };
+    });
+    return Promise.all(people);
+  } catch (error) {
+    throw new Error(error);
+  }
 };
 
 const fetchSpecies = async (speciesEndpoint) => {
-  const speciesResponse = await fetch(speciesEndpoint);
-  const species = await speciesResponse.json();
-  return species.name;
+  try { 
+    const speciesResponse = await fetch(speciesEndpoint);
+    const species = await speciesResponse.json();
+    return species.name;
+  } catch (error) {
+    throw new Error(error);
+  }
 };
 
 const fetchHomeworldData = async (homeworldEndpoint) => {
-  const homeworldResponse = await fetch(homeworldEndpoint);
-  const homeworld = await homeworldResponse.json();
-  return {
-    homeworld: homeworld.name,
-    homeworldPop: homeworld.population
-  };
+  try {
+    const homeworldResponse = await fetch(homeworldEndpoint);
+    const homeworld = await homeworldResponse.json();
+    return {
+      homeworld: homeworld.name,
+      homeworldPop: homeworld.population
+    }; 
+  } catch (error) {
+    throw new Error(error);
+  }
 };
 
 // Planets API endpoint 
 
 const callPlanetsEndpoint = async () => {
-  const response = await fetch('https://swapi.co/api/planets');
-  const planetsData = await response.json();
-  const arrayOfPlanets = await makePlanetsObjects(planetsData.results);
+  try {
+    const response = await fetch('https://swapi.co/api/planets');
+    const planetsData = await response.json();
+    const arrayOfPlanets = await makePlanetsObjects(planetsData.results);
 
-  return arrayOfPlanets;
+    return arrayOfPlanets;
+  } catch (error) {
+    throw new Error(error);
+  }
 };
 
 const makePlanetsObjects = async planetsArray => {
-  const planets = planetsArray.map(async planet => {
-    const residents = await fetchResidents(planet.residents);
-    return {
-      terrain: planet.terrain,
-      population: planet.population,
-      name: planet.name,
-      climate: planet.climate,
-      residents
-    };
-  });
+  try {
+    const planets = planetsArray.map(async planet => {
+      const residents = await fetchResidents(planet.residents);
+      return {
+        terrain: planet.terrain,
+        population: planet.population,
+        name: planet.name,
+        climate: planet.climate,
+        residents
+      };
+    });
 
-  return Promise.all(planets);
+    return Promise.all(planets);
+  } catch (error) {
+    throw new Error(error);
+  }
 };
 
 const fetchResidents = async residentsEndpointsArray => {
-  const residents = residentsEndpointsArray.map(async endpoint => {
-    const response = await fetch(endpoint);
-    const resident = await response.json();
-    return resident.name;
-  });
+  try {
+    const residents = residentsEndpointsArray.map(async endpoint => {
+      const response = await fetch(endpoint);
+      const resident = await response.json();
+      return resident.name;
+    });
 
-  return Promise.all(residents);
+    return Promise.all(residents);
+  } catch (error) {
+    throw new Error(error);
+  }
 };
 
 // Vehicles API endpoint 
 
 const callVehiclesEndpoint = async () => {
-  const response = await fetch('https://swapi.co/api/vehicles');
-  const vehiclesData = await response.json();
-  const arrayOfVehicles = await makeVehiclesObjects(vehiclesData.results);
+  try {
+    const response = await fetch('https://swapi.co/api/vehicles');
+    const vehiclesData = await response.json();
+    const arrayOfVehicles = await makeVehiclesObjects(vehiclesData.results);
 
-  return arrayOfVehicles;
+    return arrayOfVehicles;
+  } catch (error) {
+    throw new Error(error);
+  }
 };
 
 const makeVehiclesObjects = async vehiclesArray => {
-  const vehicles = vehiclesArray.map(async vehicle => {
-    return { 
-      name: vehicle.name, 
-      model: vehicle.model, 
-      class: vehicle.vehicle_class,
-      numPassengers: vehicle.passengers
-    };
-  });
+  try {
+    const vehicles = vehiclesArray.map(async vehicle => {
+      return { 
+        name: vehicle.name, 
+        model: vehicle.model, 
+        class: vehicle.vehicle_class,
+        numPassengers: vehicle.passengers
+      };
+    });
 
-  return Promise.all(vehicles);
+    return Promise.all(vehicles);
+  } catch (error) {
+    throw new Error(error);
+  }
 };
 
 export {
