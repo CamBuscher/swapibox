@@ -1,21 +1,22 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const PlanetCard = ({planet, toggleFavorite, isFavorite}) => {
   const favoriteIcon = isFavorite ?
     <img src='/images/fullStar.png' className='favoriteIcon' title='Click to remove from favoritesClick to add to favorites' onClick={() => toggleFavorite(planet)} /> 
     :
-    <img src='/images/star.png' className='favoriteIcon' title='Click to add to favorites' onClick={() => toggleFavorite(planet)} />
+    <img src='/images/star.png' className='favoriteIcon' title='Click to add to favorites' onClick={() => toggleFavorite(planet)} />;
 
   const residents = () => {
     if (planet.residents.length) {
       return <div>
         <p>Notable residents:</p>
         <ul>
-          {planet.residents.map(resident => <li>{resident}</li>)}
+          {planet.residents.map((resident, index) => <li key={`${index} resident`}>{resident}</li>)};
         </ul>
-      </div>
+      </div>;
     } else {
-      return <p> No notable resients </p>
+      return <p> No notable resients </p>;
     }
   }
   return <div className="card planetsCard">
@@ -28,4 +29,10 @@ const PlanetCard = ({planet, toggleFavorite, isFavorite}) => {
   </div>;
 }
 
-export default PlanetCard
+PlanetCard.propTypes = {
+  planet: PropTypes.obj.isRequired,
+  toggleFavorite: PropTypes.func.isRequired,
+  isFavorite: PropTypes.bool.isRequired
+};
+
+export default PlanetCard;

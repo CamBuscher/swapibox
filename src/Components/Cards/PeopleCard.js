@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const PeopleCard = ({person, toggleFavorite, isFavorite}) => {
   const favoriteIcon = isFavorite ?
     <img src='/images/fullStar.png' className='favoriteIcon' title='Click to remove from favorites' onClick={() => toggleFavorite(person)} />
     :
-    <img src='/images/star.png' className='favoriteIcon' title='Click to add to favorites' onClick={() => toggleFavorite(person)} />
+    <img src='/images/star.png' className='favoriteIcon' title='Click to add to favorites' onClick={() => toggleFavorite(person)} />;
 
   return (
     <div className='card peopleCard'>
@@ -14,7 +15,13 @@ const PeopleCard = ({person, toggleFavorite, isFavorite}) => {
       <p>Homeworld: {person.homeworld}</p>
       <p>Population: {person.homeworldPop}</p>
     </div>
-  )
-}
+  );
+};
 
-export default PeopleCard
+PeopleCard.propTypes = {
+  person: PropTypes.obj.isRequired,
+  toggleFavorite: PropTypes.func.isRequired,
+  isFavorite: PropTypes.bool.isRequired
+};
+
+export default PeopleCard;

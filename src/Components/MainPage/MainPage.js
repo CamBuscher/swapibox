@@ -1,11 +1,12 @@
-import React from 'react'
-import CardDisplay from '../CardDisplay/CardDisplay'
-import './MainPage.css'
+import React from 'react';
+import CardDisplay from '../CardDisplay/CardDisplay';
+import PropTypes from 'prop-types';
+import './MainPage.css';
 
 const MainPage = ({ favorites, displayFavorites, findPeople, findPlanets, findVehicles, cards, toggleFavorite, displayedCategory }) => {
   const disabledCheck = (category) => {
-    return category === displayedCategory ? true : false
-  }
+    return category === displayedCategory ? true : false;
+  };
 
   return (
     <div className='mainPage'>
@@ -24,7 +25,18 @@ const MainPage = ({ favorites, displayFavorites, findPeople, findPlanets, findVe
         favorites={favorites}
       />
     </div>
-  )
-}
+  );
+};
 
-export default MainPage
+MainPage.propTypes = {
+  favorites: PropTypes.array.isRequired,
+  displayFavorites: PropTypes.func.isRequired,
+  findPeople: PropTypes.func.isRequired,
+  findPlanets: PropTypes.func.isRequired,
+  findVehicles: PropTypes.func.isRequired,
+  cards: PropTypes.array.isRequired,
+  toggleFavorite: PropTypes.func.isRequired,
+  displayedCategory: PropTypes.string.isRequired
+};
+
+export default MainPage;
