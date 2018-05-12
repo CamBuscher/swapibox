@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import mockData from '../../Data/Mock'
-import FilmsDataHandler from '../../Helpers/FilmsDataHandler'
 import OpeningCrawl from '../OpeningCrawl/OpeningCrawl'
 import Loading from '../Loading/Loading'
 import MainPage from '../MainPage/MainPage'
@@ -21,7 +19,8 @@ class App extends Component {
       openingCrawlData: null,
       openingCrawlDisplayed: true,
       cards: [],
-      favorites: []
+      favorites: [],
+      displayedCategory: null
     }
   }
 
@@ -36,23 +35,24 @@ class App extends Component {
 
   findPeople = async () => {
     const arrayOfPeople = await callPeopleEndpoint()
-    this.setState({ cards: arrayOfPeople })
+    this.setState({ cards: arrayOfPeople, displayedCategory: 'people' })
   }
 
   findPlanets = async () => {
     const arrayOfPlanets = await callPlanetsEndpoint()
-    this.setState({ cards: arrayOfPlanets })
+    this.setState({ cards: arrayOfPlanets, displayedCategory: 'planets' })
   }
 
   findVehicles = async () => {
     const arrayOfVehicles = await callVehiclesEndpoint()
-    this.setState({ cards: arrayOfVehicles });
+    this.setState({ cards: arrayOfVehicles, displayedCategory: 'vehicles' });
   }
 
   toggleFavorite = (obj) => {
     if (this.state.favorites.find(favorite => favorite.name === obj.name)) {
       const newFavorites = this.state.favorites.filter(favorite => favorite.name !== obj.name)
       this.setState({ favorites: newFavorites })
+      this.state.displayedCategory === 'favorites' && this.setState({ cards: newFavorites })
     } else {
       const newFavorites = [...this.state.favorites, obj]
       this.setState({ favorites: newFavorites })
@@ -60,7 +60,7 @@ class App extends Component {
   }
 
   displayFavorites = () => {
-    this.setState({ cards : this.state.favorites })
+    this.setState({ cards : this.state.favorites, displayedCategory: 'favorites' })
   }
 
   componentDidMount() {
@@ -81,7 +81,8 @@ class App extends Component {
           findVehicles={this.findVehicles}
           toggleFavorite={this.toggleFavorite}
           displayFavorites={this.displayFavorites}
-          numFavorites={this.state.favorites.length}
+          displayedCategory={this.state.displayedCategory}
+          favorites={this.state.favorites}
           cards={this.state.cards}
         />
       }
