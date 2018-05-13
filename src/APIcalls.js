@@ -8,7 +8,7 @@ const getOpeningCrawl = async () => {
     const allCrawlData = await new FilmsDataHandler(data);
     return allCrawlData.data[Math.floor(Math.random() * allCrawlData.data.length)];
   } catch (error) {
-    throw new Error(error);
+    throw new Error('Something went wrong!');
   }
 };
 
@@ -21,7 +21,7 @@ const callPeopleEndpoint = async () => {
 
     return arrayOfPeople;
   } catch (error) {
-    throw new Error(error);
+    throw new Error('Something went wrong!');
   }
 };
 
@@ -38,7 +38,7 @@ const makePeopleObjects = async (peopleArray) => {
     });
     return Promise.all(people);
   } catch (error) {
-    throw new Error(error);
+    throw new Error('Something went wrong!');
   }
 };
 
@@ -48,7 +48,7 @@ const fetchSpecies = async (speciesEndpoint) => {
     const species = await speciesResponse.json();
     return species.name;
   } catch (error) {
-    throw new Error(error);
+    throw new Error('Something went wrong!');
   }
 };
 
@@ -61,7 +61,7 @@ const fetchHomeworldData = async (homeworldEndpoint) => {
       homeworldPop: homeworld.population
     }; 
   } catch (error) {
-    throw new Error(error);
+    throw new Error('Something went wrong!');
   }
 };
 
@@ -75,7 +75,7 @@ const callPlanetsEndpoint = async () => {
 
     return arrayOfPlanets;
   } catch (error) {
-    throw new Error(error);
+    throw new Error('Something went wrong!');
   }
 };
 
@@ -94,7 +94,7 @@ const makePlanetsObjects = async planetsArray => {
 
     return Promise.all(planets);
   } catch (error) {
-    throw new Error(error);
+    throw new Error('Something went wrong!');
   }
 };
 
@@ -108,7 +108,7 @@ const fetchResidents = async residentsEndpointsArray => {
 
     return Promise.all(residents);
   } catch (error) {
-    throw new Error(error);
+    throw new Error('Something went wrong!');
   }
 };
 
@@ -122,7 +122,7 @@ const callVehiclesEndpoint = async () => {
 
     return arrayOfVehicles;
   } catch (error) {
-    throw new Error(error);
+    throw new Error('Something went wrong!');
   }
 };
 
@@ -139,7 +139,7 @@ const makeVehiclesObjects = async vehiclesArray => {
 
     return Promise.all(vehicles);
   } catch (error) {
-    throw new Error(error);
+    throw new Error('Something went wrong!');
   }
 };
 
