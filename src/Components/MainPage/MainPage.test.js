@@ -5,7 +5,7 @@ import MainPage from './MainPage';
 
 describe('MainPage', () => {
   let wrapper;
-  let mockProps
+  let mockProps;
 
   beforeEach(() => {
     mockProps = {
