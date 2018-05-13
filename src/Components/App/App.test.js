@@ -69,11 +69,11 @@ describe('app', () => {
         homeworldPop: "200000",
         name: "Luke Skywalker",
         species: "Human"
-      }]
-      APIcalls.callPeopleEndpoint = jest.fn().mockReturnValue(expectation)
+      }];
+      APIcalls.callPeopleEndpoint = jest.fn().mockReturnValue(expectation);
 
-      app.instance().findPeople()
-      expect(APIcalls.callPeopleEndpoint).toHaveBeenCalled()
+      app.instance().findPeople();
+      expect(APIcalls.callPeopleEndpoint).toHaveBeenCalled();
     });
 
     it('should set set cards state and displayedCategory state', async () => {
@@ -82,13 +82,31 @@ describe('app', () => {
         homeworldPop: "200000",
         name: "Luke Skywalker",
         species: "Human"
-      }]
+      }];
       APIcalls.callPeopleEndpoint = jest.fn().mockReturnValue(expectation);
 
       await app.instance().findPeople();
       
       expect(app.instance().state.displayedCategory).toEqual('people');
       expect(app.instance().state.cards).toEqual(expectation);
-    })
+    });
+  });
+
+  describe('findPlanets', () => {
+    it('should call callPlanetsEndpoint', async () => {
+      const expectation = [{
+        climate: "temperate",
+        name: "Alderaan",
+        population: "2000000000",
+        residents: [],
+        terrain: "grasslands, mountains"
+      }];
+
+      APIcalls.callPlanetsEndpoint = jest.fn().mockReturnValue(expectation)
+
+      await app.instance().findPlanets()
+
+      expect(APIcalls.callPlanetsEndpoint).toHaveBeenCalled()
+    });
   });
 });
