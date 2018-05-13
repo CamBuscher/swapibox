@@ -1,0 +1,325 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card components PeopleCard matches snapshot 1`] = `
+ReactWrapper {
+  "length": 1,
+  Symbol(enzyme.__unrendered__): <PeopleCard
+    isFavorite={false}
+    person={
+        Object {
+            "name": "onyx",
+          }
+    }
+    toggleFavorite={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "isFavorite": false,
+      "person": Object {
+        "name": "onyx",
+      },
+      "toggleFavorite": [Function],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="card peopleCard"
+>
+        <h3>
+                onyx
+        </h3>
+        <h4 />
+        <img
+                src="/images/star.png"
+                class="favoriteIcon notFavorite"
+                title="Click to add to favorites"
+        />
+        <p>
+                Homeworld: 
+        </p>
+        <p>
+                Population: 
+        </p>
+</div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            onyx
+</h3>,
+          <h4 />,
+          <img
+            className="favoriteIcon notFavorite"
+            onClick={[Function]}
+            src="/images/star.png"
+            title="Click to add to favorites"
+/>,
+          <p>
+            Homeworld: 
+</p>,
+          <p>
+            Population: 
+</p>,
+        ],
+        "className": "card peopleCard",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <h3>
+            onyx
+</h3>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "onyx",
+          },
+          "ref": null,
+          "rendered": Array [
+            "onyx",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": <h4 />,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": <img
+            src="/images/star.png"
+            class="favoriteIcon notFavorite"
+            title="Click to add to favorites"
+/>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "favoriteIcon notFavorite",
+            "onClick": [Function],
+            "src": "/images/star.png",
+            "title": "Click to add to favorites",
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+          ],
+          "type": "img",
+        },
+        Object {
+          "instance": <p>
+            Homeworld: 
+</p>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Homeworld: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Homeworld: ",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": <p>
+            Population: 
+</p>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Population: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Population: ",
+          ],
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "isFavorite": false,
+        "person": Object {
+          "name": "onyx",
+        },
+        "toggleFavorite": [Function],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="card peopleCard"
+>
+          <h3>
+                    onyx
+          </h3>
+          <h4 />
+          <img
+                    src="/images/star.png"
+                    class="favoriteIcon notFavorite"
+                    title="Click to add to favorites"
+          />
+          <p>
+                    Homeworld: 
+          </p>
+          <p>
+                    Population: 
+          </p>
+</div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3>
+              onyx
+</h3>,
+            <h4 />,
+            <img
+              className="favoriteIcon notFavorite"
+              onClick={[Function]}
+              src="/images/star.png"
+              title="Click to add to favorites"
+/>,
+            <p>
+              Homeworld: 
+</p>,
+            <p>
+              Population: 
+</p>,
+          ],
+          "className": "card peopleCard",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <h3>
+              onyx
+</h3>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "onyx",
+            },
+            "ref": null,
+            "rendered": Array [
+              "onyx",
+            ],
+            "type": "h3",
+          },
+          Object {
+            "instance": <h4 />,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+            },
+            "ref": null,
+            "rendered": Array [
+              undefined,
+            ],
+            "type": "h4",
+          },
+          Object {
+            "instance": <img
+              src="/images/star.png"
+              class="favoriteIcon notFavorite"
+              title="Click to add to favorites"
+/>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "favoriteIcon notFavorite",
+              "onClick": [Function],
+              "src": "/images/star.png",
+              "title": "Click to add to favorites",
+            },
+            "ref": null,
+            "rendered": Array [
+              undefined,
+            ],
+            "type": "img",
+          },
+          Object {
+            "instance": <p>
+              Homeworld: 
+</p>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Homeworld: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Homeworld: ",
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": <p>
+              Population: 
+</p>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Population: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Population: ",
+            ],
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 import CardDisplay from './CardDisplay';
-import PeopleCard from '../Cards/PeopleCard'
 
 describe('CardDisplay', () => {
   let wrapper;
