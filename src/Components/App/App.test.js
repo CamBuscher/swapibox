@@ -126,4 +126,37 @@ describe('app', () => {
       expect(app.instance().state.displayedCategory).toEqual('planets');
     });
   });
+
+  describe('findVehicles', () => {
+    it('should call callVehiclesEndpoint', async () => {
+      const expectation = [{
+        class: "wheeled",
+        model: "Digger Crawler",
+        name: "Sand Crawler",
+        numPassengers: "30"
+      }];
+
+      APIcalls.callVehiclesEndpoint = jest.fn().mockReturnValue(expectation)
+
+      await app.instance().findVehicles()
+
+      expect(APIcalls.callVehiclesEndpoint).toHaveBeenCalled()
+    });
+
+    it('should set cards state and displayedCategory state', async () => {
+      const expectation = [{
+        class: "wheeled",
+        model: "Digger Crawler",
+        name: "Sand Crawler",
+        numPassengers: "30"
+      }];
+
+      APIcalls.callVehiclesEndpoint = jest.fn().mockReturnValue(expectation);
+
+      await app.instance().findVehicles();
+
+      expect(app.instance().state.cards).toEqual(expectation);
+      expect(app.instance().state.displayedCategory).toEqual('vehicles');
+    });
+  });
 });
