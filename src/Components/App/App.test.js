@@ -53,4 +53,42 @@ describe('app', () => {
       expect(app.instance().state.openingCrawlData).toEqual(expectation)
     });
   });
+
+  describe('closeCrawl', () => {
+    it('should change app state of openingCrawlDisplayed to false', () => {
+      app.instance().closeCrawl();
+
+      expect(app.instance().state.openingCrawlDisplayed).toEqual(false);
+    });
+  });
+
+  describe('findPeople', () => {
+    it('should call callPeopleEndpoint', () => {
+      const expectation = [{
+        homeworld: "Tatooine",
+        homeworldPop: "200000",
+        name: "Luke Skywalker",
+        species: "Human"
+      }]
+      APIcalls.callPeopleEndpoint = jest.fn().mockReturnValue(expectation)
+
+      app.instance().findPeople()
+      expect(APIcalls.callPeopleEndpoint).toHaveBeenCalled()
+    });
+
+    it('should set set cards state and displayedCategory state', async () => {
+      const expectation = [{
+        homeworld: "Tatooine",
+        homeworldPop: "200000",
+        name: "Luke Skywalker",
+        species: "Human"
+      }]
+      APIcalls.callPeopleEndpoint = jest.fn().mockReturnValue(expectation);
+
+      await app.instance().findPeople();
+      
+      expect(app.instance().state.displayedCategory).toEqual('people');
+      expect(app.instance().state.cards).toEqual(expectation);
+    })
+  });
 });
