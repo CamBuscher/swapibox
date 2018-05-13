@@ -194,8 +194,8 @@ describe('app', () => {
   describe('displayFavorites', () => {
     it('should set the cards state equal to favorites and displayedCategory to favorites', () => {
       const expected = [{ name: 'cam' }, { name: 'court' }];
-      app.setState({ favorites: expected })
-      
+      app.setState({ favorites: expected });
+
       app.instance().displayFavorites();
 
       expect(app.state().cards).toEqual(expected);
