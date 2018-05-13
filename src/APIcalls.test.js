@@ -4,9 +4,48 @@ import {
   callPlanetsEndpoint, 
   callVehiclesEndpoint } from './APIcalls';
 
-// describe('getOpeningCrawl', () => {
+describe('getOpeningCrawl', () => {
+  let FilmsDataHandler;
+  let allCrawlData;
 
-// });
+  beforeEach(() => {
+    FilmsDataHandler = jest.fn();
+    allCrawlData = {data: [{
+      crawl: "It is a period of civil war. Rebel spaceships, striking from a hidden ...",
+      release_date: "1977-05-25",
+      title: "A New Hope"
+    }]};
+
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      json: () => Promise.resolve({
+        results: allCrawlData.data
+      })
+    }));
+  });
+
+  it('should call fetch with correct paramaters', async () => {
+    const expected = 'https://swapi.co/api/films/';
+
+    await getOpeningCrawl();
+
+    expect(window.fetch).toHaveBeenCalledWith(expected);
+  });
+
+  it('delivers a singular object of filmData', async () => {
+    const result = await getOpeningCrawl()
+    const expected = { title: 'A New Hope', release_date: '1977-05-25', crawl: undefined };
+
+    expect(result).toEqual(expected);
+  })
+
+  it('throws an error if the fetch call is rejected', async () => {
+    window.fetch = jest.fn().mockImplementation((() => Promise.resolve({ status: 500 })))
+
+    const expected = Error('Something went wrong!')
+
+    expect(getOpeningCrawl()).rejects.toEqual(expected)
+  })  
+});
 
 describe('callPeopleEndpoint', () => {
   let makePeopleObjects;
