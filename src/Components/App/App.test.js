@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import * as APIcalls from '../../APIcalls';
 import App from './App';
 
@@ -24,7 +24,7 @@ describe('app', () => {
       displayedCategory: null
     };
 
-    expect(app.instance().state).toEqual(expected)
+    expect(app.instance().state).toEqual(expected);
   });
 
   describe('getCrawl', () => {
@@ -44,13 +44,13 @@ describe('app', () => {
         crawl: 'blah blah',
         release_date: 123,
         title: 'great movie'
-      }
+      };
 
       APIcalls.getOpeningCrawl = jest.fn().mockReturnValue(expectation);
       await app.instance().getCrawl();
 
-      expect(app.instance().state.loading).toEqual(false)
-      expect(app.instance().state.openingCrawlData).toEqual(expectation)
+      expect(app.instance().state.loading).toEqual(false);
+      expect(app.instance().state.openingCrawlData).toEqual(expectation);
     });
   });
 
@@ -102,11 +102,11 @@ describe('app', () => {
         terrain: "grasslands, mountains"
       }];
 
-      APIcalls.callPlanetsEndpoint = jest.fn().mockReturnValue(expectation)
+      APIcalls.callPlanetsEndpoint = jest.fn().mockReturnValue(expectation);
 
-      await app.instance().findPlanets()
+      await app.instance().findPlanets();
 
-      expect(APIcalls.callPlanetsEndpoint).toHaveBeenCalled()
+      expect(APIcalls.callPlanetsEndpoint).toHaveBeenCalled();
     });
 
     it('should set cards state and displayedCategory state', async () => {
@@ -136,11 +136,11 @@ describe('app', () => {
         numPassengers: "30"
       }];
 
-      APIcalls.callVehiclesEndpoint = jest.fn().mockReturnValue(expectation)
+      APIcalls.callVehiclesEndpoint = jest.fn().mockReturnValue(expectation);
 
-      await app.instance().findVehicles()
+      await app.instance().findVehicles();
 
-      expect(APIcalls.callVehiclesEndpoint).toHaveBeenCalled()
+      expect(APIcalls.callVehiclesEndpoint).toHaveBeenCalled();
     });
 
     it('should set cards state and displayedCategory state', async () => {
@@ -188,6 +188,18 @@ describe('app', () => {
       app.instance().toggleFavorite({ name: 'onyx' });
 
       expect(app.state().favorites).toEqual(expected);
+    });
+  });
+
+  describe('displayFavorites', () => {
+    it('should set the cards state equal to favorites and displayedCategory to favorites', () => {
+      const expected = [{ name: 'cam' }, { name: 'court' }];
+      app.setState({ favorites: expected })
+      
+      app.instance().displayFavorites();
+
+      expect(app.state().cards).toEqual(expected);
+      expect(app.state().displayedCategory).toEqual('favorites');
     });
   });
 });
