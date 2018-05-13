@@ -54,4 +54,14 @@ describe('CardDisplay', () => {
     const card = wrapper.find('div').find('div.card');
     expect(card.hasClass('planetsCard')).toBe(true);
   });
+
+  it('should render a message if no cards given', () => {
+    wrapper = mount(<CardDisplay
+      {...mockProps}
+      cards={[]}
+    />);
+
+    const message = wrapper.find('div').find('h3');
+    expect(message).toHaveLength(1);
+  });
 });
