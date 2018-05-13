@@ -32,8 +32,16 @@ describe('CardDisplay', () => {
     />);
     
     const card = wrapper.find('div').find('div.card')
-    expect(card.hasClass('peopleCard'))
+    expect(card.hasClass('peopleCard')).toBe(true);
   });
 
-  
+  it('should render a vehicleCard if given correct prop', () => {
+    wrapper = mount(<CardDisplay
+      {...mockProps}
+      cards={[{ name: 'Car', class: 'economy' }]}
+    />);
+
+    const card = wrapper.find('div').find('div.card')
+    expect(card.hasClass('vehiclesCard')).toBe(true)
+  });
 });
