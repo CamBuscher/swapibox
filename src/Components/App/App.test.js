@@ -159,4 +159,35 @@ describe('app', () => {
       expect(app.instance().state.displayedCategory).toEqual('vehicles');
     });
   });
+
+  describe('toggleFavorite', () => {
+    beforeEach(() => {
+      app.instance().setState({favorites: [{name: 'cam'}, {name: 'court'}]});
+    });
+
+    it('should remove a favorite if it already exists', () => {
+      const expected = [{name: 'court'}];
+
+      app.instance().toggleFavorite({name: 'cam'});
+
+      expect(app.state().favorites).toEqual(expected);
+    });
+
+    it('should update the cards state if favorites is currently displayed', () => {
+      const expected = [{ name: 'court' }];
+
+      app.instance().setState({ displayedCategory: 'favorites' });
+      app.instance().toggleFavorite({ name: 'cam' });
+
+      expect(app.state().cards).toEqual(expected);
+    });
+
+    it('should add a card to favorites if it\'s not in already', () => {
+      const expected = [{ name: 'cam' }, { name: 'court' }, { name: 'onyx' }];
+
+      app.instance().toggleFavorite({ name: 'onyx' });
+
+      expect(app.state().favorites).toEqual(expected);
+    });
+  });
 });
