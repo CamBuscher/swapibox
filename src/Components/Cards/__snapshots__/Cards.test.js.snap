@@ -324,6 +324,575 @@ ReactWrapper {
 }
 `;
 
+exports[`Card components PlanetCard matches snapshot 1`] = `
+ReactWrapper {
+  "length": 1,
+  Symbol(enzyme.__unrendered__): <PlanetCard
+    isFavorite={false}
+    planet={
+        Object {
+            "name": "earth",
+            "residents": Array [
+              "cam",
+            ],
+          }
+    }
+    toggleFavorite={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "isFavorite": false,
+      "planet": Object {
+        "name": "earth",
+        "residents": Array [
+          "cam",
+        ],
+      },
+      "toggleFavorite": [Function],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="card planetsCard"
+>
+        <h3>
+                earth
+        </h3>
+        <h4>
+                Population: 
+        </h4>
+        <img
+                src="/images/star.png"
+                class="favoriteIcon notFavorite"
+                title="Click to add to favorites"
+        />
+        <p>
+                Climate: 
+        </p>
+        <p>
+                Terrain: 
+        </p>
+        <div>
+                <p>
+                        Notable residents:
+                </p>
+                <ul>
+                        <li>
+                                cam
+                        </li>
+                        ;
+                </ul>
+        </div>
+</div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            earth
+</h3>,
+          <h4>
+            Population: 
+</h4>,
+          <img
+            className="favoriteIcon notFavorite"
+            onClick={[Function]}
+            src="/images/star.png"
+            title="Click to add to favorites"
+/>,
+          <p>
+            Climate: 
+</p>,
+          <p>
+            Terrain: 
+</p>,
+          <div>
+            <p>
+                        Notable residents:
+            </p>
+            <ul>
+                        <li>
+                                    cam
+                        </li>
+                        ;
+            </ul>
+</div>,
+        ],
+        "className": "card planetsCard",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <h3>
+            earth
+</h3>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "earth",
+          },
+          "ref": null,
+          "rendered": Array [
+            "earth",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": <h4>
+            Population: 
+</h4>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Population: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Population: ",
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": <img
+            src="/images/star.png"
+            class="favoriteIcon notFavorite"
+            title="Click to add to favorites"
+/>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "favoriteIcon notFavorite",
+            "onClick": [Function],
+            "src": "/images/star.png",
+            "title": "Click to add to favorites",
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+          ],
+          "type": "img",
+        },
+        Object {
+          "instance": <p>
+            Climate: 
+</p>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Climate: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Climate: ",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": <p>
+            Terrain: 
+</p>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Terrain: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Terrain: ",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": <div>
+            <p>
+                        Notable residents:
+            </p>
+            <ul>
+                        <li>
+                                    cam
+                        </li>
+                        ;
+            </ul>
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                Notable residents:
+</p>,
+              <ul>
+                <li>
+                                cam
+                </li>
+                ;
+</ul>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <p>
+                Notable residents:
+</p>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Notable residents:",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Notable residents:",
+              ],
+              "type": "p",
+            },
+            Object {
+              "instance": <ul>
+                <li>
+                                cam
+                </li>
+                ;
+</ul>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  Array [
+                    <li>
+                      cam
+</li>,
+                  ],
+                  ";",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <li>
+                    cam
+</li>,
+                  "key": "0 resident",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "cam",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "cam",
+                  ],
+                  "type": "li",
+                },
+                ";",
+              ],
+              "type": "ul",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "isFavorite": false,
+        "planet": Object {
+          "name": "earth",
+          "residents": Array [
+            "cam",
+          ],
+        },
+        "toggleFavorite": [Function],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="card planetsCard"
+>
+          <h3>
+                    earth
+          </h3>
+          <h4>
+                    Population: 
+          </h4>
+          <img
+                    src="/images/star.png"
+                    class="favoriteIcon notFavorite"
+                    title="Click to add to favorites"
+          />
+          <p>
+                    Climate: 
+          </p>
+          <p>
+                    Terrain: 
+          </p>
+          <div>
+                    <p>
+                              Notable residents:
+                    </p>
+                    <ul>
+                              <li>
+                                        cam
+                              </li>
+                              ;
+                    </ul>
+          </div>
+</div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3>
+              earth
+</h3>,
+            <h4>
+              Population: 
+</h4>,
+            <img
+              className="favoriteIcon notFavorite"
+              onClick={[Function]}
+              src="/images/star.png"
+              title="Click to add to favorites"
+/>,
+            <p>
+              Climate: 
+</p>,
+            <p>
+              Terrain: 
+</p>,
+            <div>
+              <p>
+                            Notable residents:
+              </p>
+              <ul>
+                            <li>
+                                          cam
+                            </li>
+                            ;
+              </ul>
+</div>,
+          ],
+          "className": "card planetsCard",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <h3>
+              earth
+</h3>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "earth",
+            },
+            "ref": null,
+            "rendered": Array [
+              "earth",
+            ],
+            "type": "h3",
+          },
+          Object {
+            "instance": <h4>
+              Population: 
+</h4>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Population: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Population: ",
+            ],
+            "type": "h4",
+          },
+          Object {
+            "instance": <img
+              src="/images/star.png"
+              class="favoriteIcon notFavorite"
+              title="Click to add to favorites"
+/>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "favoriteIcon notFavorite",
+              "onClick": [Function],
+              "src": "/images/star.png",
+              "title": "Click to add to favorites",
+            },
+            "ref": null,
+            "rendered": Array [
+              undefined,
+            ],
+            "type": "img",
+          },
+          Object {
+            "instance": <p>
+              Climate: 
+</p>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Climate: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Climate: ",
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": <p>
+              Terrain: 
+</p>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Terrain: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Terrain: ",
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": <div>
+              <p>
+                            Notable residents:
+              </p>
+              <ul>
+                            <li>
+                                          cam
+                            </li>
+                            ;
+              </ul>
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Notable residents:
+</p>,
+                <ul>
+                  <li>
+                                    cam
+                  </li>
+                  ;
+</ul>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <p>
+                  Notable residents:
+</p>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Notable residents:",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Notable residents:",
+                ],
+                "type": "p",
+              },
+              Object {
+                "instance": <ul>
+                  <li>
+                                    cam
+                  </li>
+                  ;
+</ul>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    Array [
+                      <li>
+                        cam
+</li>,
+                    ],
+                    ";",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <li>
+                      cam
+</li>,
+                    "key": "0 resident",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "cam",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "cam",
+                    ],
+                    "type": "li",
+                  },
+                  ";",
+                ],
+                "type": "ul",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
 exports[`Card components VehicleCard matches snapshot 1`] = `
 ReactWrapper {
   "length": 1,

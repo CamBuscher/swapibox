@@ -84,4 +84,44 @@ describe('Card components', () => {
       expect(wrapper.prop('toggleFavorite')).toHaveBeenCalledWith({ name: 'prius' });
     });
   })
+  
+  describe('PlanetCard', () => {
+    let wrapper;
+    let mockProps;
+
+    beforeEach(() => {
+      mockProps = {
+        planet: { name: 'earth', residents: ['cam'] },
+        toggleFavorite: jest.fn(),
+        isFavorite: false
+      };
+
+      wrapper = mount(<PlanetCard {...mockProps} />);
+    });
+
+    it('matches snapshot', () => {
+      expect(wrapper).toMatchSnapshot()
+    });
+
+    it('should have an icon with class of favorite if it is a favorite', () => {
+      wrapper = shallow(<PlanetCard {...mockProps} isFavorite={true} /> );
+
+      const icon = wrapper.find('div').find('img');
+      expect(icon.hasClass('favorite')).toBe(true);
+    });
+
+    it('should have an icon with class of notFavorite if it is not a favorite', () => {
+      wrapper = shallow(<PlanetCard {...mockProps} />);
+
+      const icon = wrapper.find('div').find('img');
+      expect(icon.hasClass('notFavorite')).toBe(true);
+    });
+
+    it('should call toggleFavorite with person as a param when icon is clicked', () => {
+      const icon = wrapper.find('div').find('img');
+      icon.simulate('click');
+
+      expect(wrapper.prop('toggleFavorite')).toHaveBeenCalledWith({ name: 'earth', residents: ['cam'] });
+    });
+  });
 });
