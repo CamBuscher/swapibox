@@ -32,19 +32,19 @@ describe('getOpeningCrawl', () => {
   });
 
   it('delivers a singular object of filmData', async () => {
-    const result = await getOpeningCrawl()
+    const result = await getOpeningCrawl();
     const expected = { title: 'A New Hope', release_date: '1977-05-25', crawl: undefined };
 
     expect(result).toEqual(expected);
-  })
+  });
 
   it('throws an error if the fetch call is rejected', async () => {
-    window.fetch = jest.fn().mockImplementation((() => Promise.resolve({ status: 500 })))
+    window.fetch = jest.fn().mockImplementation((() => Promise.resolve({ status: 500 })));
 
-    const expected = Error('Something went wrong!')
+    const expected = Error('Something went wrong!');
 
-    expect(getOpeningCrawl()).rejects.toEqual(expected)
-  })  
+    expect(getOpeningCrawl()).rejects.toEqual(expected);
+  });
 });
 
 describe('callPeopleEndpoint', () => {
@@ -63,27 +63,27 @@ describe('callPeopleEndpoint', () => {
   });
 
   it('should call fetch with correct paramaters', async () => {
-    const expected = 'https://swapi.co/api/people'
+    const expected = 'https://swapi.co/api/people';
     
-    await callPeopleEndpoint()
+    await callPeopleEndpoint();
 
     expect(window.fetch).toHaveBeenCalledWith(expected);
   });
 
   it('delivers an array of people', async () => {
-    const result = await callPeopleEndpoint()
-    const expected = [{ homeworld: undefined, homeworldPop: undefined, species: undefined, name: undefined }]
+    const result = await callPeopleEndpoint();
+    const expected = [{ homeworld: undefined, homeworldPop: undefined, species: undefined, name: undefined }];
     
-    expect(result).toEqual(expected)
+    expect(result).toEqual(expected);
   })
 
   it('throws an error if the fetch call is rejected', async () => {
-    window.fetch = jest.fn().mockImplementation((() => Promise.resolve({ status: 500 })))
+    window.fetch = jest.fn().mockImplementation((() => Promise.resolve({ status: 500 })));
 
-    const expected = Error('Something went wrong!')
+    const expected = Error('Something went wrong!');
 
-    expect(callPeopleEndpoint()).rejects.toEqual(expected)
-  })  
+    expect(callPeopleEndpoint()).rejects.toEqual(expected);
+  });
 });
 
 describe('callPlanetsEndpoint', () => {
@@ -108,28 +108,28 @@ describe('callPlanetsEndpoint', () => {
   });
 
   it('should call fetch with correct paramaters', async () => {
-    const expected = 'https://swapi.co/api/planets'
+    const expected = 'https://swapi.co/api/planets';
 
-    await callPlanetsEndpoint()
+    await callPlanetsEndpoint();
 
     expect(window.fetch).toHaveBeenCalledWith(expected);
   });
 
   it('delivers an array of planets', async () => {
-    const result = await callPlanetsEndpoint()
-    const expected = arrayOfPlanets
+    const result = await callPlanetsEndpoint();
+    const expected = arrayOfPlanets;
 
-    expect(result).toEqual(expected)
+    expect(result).toEqual(expected);
   })
 
   it('throws an error if the fetch call is rejected', async () => {
-    window.fetch = jest.fn().mockImplementation((() => Promise.resolve({ status: 500 })))
+    window.fetch = jest.fn().mockImplementation((() => Promise.resolve({ status: 500 })));
 
-    const expected = Error('Something went wrong!')
+    const expected = Error('Something went wrong!');
 
-    expect(callPlanetsEndpoint()).rejects.toEqual(expected)
-  })  
-})
+    expect(callPlanetsEndpoint()).rejects.toEqual(expected);
+  });
+});
 
 describe('callVehiclesEndpoint', () => {
   let makeVehiclesObjects;
@@ -152,9 +152,9 @@ describe('callVehiclesEndpoint', () => {
   });
 
   it('should call fetch with correct paramaters', async () => {
-    const expected = 'https://swapi.co/api/vehicles'
+    const expected = 'https://swapi.co/api/vehicles';
 
-    await callVehiclesEndpoint()
+    await callVehiclesEndpoint();
 
     expect(window.fetch).toHaveBeenCalledWith(expected);
   });
@@ -168,13 +168,13 @@ describe('callVehiclesEndpoint', () => {
       numPassengers: '1'
     }];
     expect(result).toEqual(expected);
-  })
+  });
 
   it('throws an error if the fetch call is rejected', async () => {
-    window.fetch = jest.fn().mockImplementation((() => Promise.resolve({ status: 500 })))
+    window.fetch = jest.fn().mockImplementation((() => Promise.resolve({ status: 500 })));
 
-    const expected = Error('Something went wrong!')
+    const expected = Error('Something went wrong!');
 
-    expect(callVehiclesEndpoint()).rejects.toEqual(expected)
-  })  
-})
+    expect(callVehiclesEndpoint()).rejects.toEqual(expected);
+  });
+});
