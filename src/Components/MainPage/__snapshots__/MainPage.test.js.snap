@@ -1,0 +1,714 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainPage should match the snapshot 1`] = `
+ReactWrapper {
+  "length": 1,
+  Symbol(enzyme.__unrendered__): <MainPage
+    cards={Array []}
+    displayFavorites={[Function]}
+    displayedCategory={null}
+    favorites={
+        Array [
+            Object {
+              "name": "cam",
+            },
+          ]
+    }
+    findPeople={[Function]}
+    findPlanets={[Function]}
+    findVehicles={[Function]}
+    toggleFavorite={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "cards": Array [],
+      "displayFavorites": [Function],
+      "displayedCategory": null,
+      "favorites": Array [
+        Object {
+          "name": "cam",
+        },
+      ],
+      "findPeople": [Function],
+      "findPlanets": [Function],
+      "findVehicles": [Function],
+      "toggleFavorite": [Function],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="mainPage"
+>
+        <header>
+                <h1>
+                        Swapibox
+                </h1>
+                <button
+                        class="favorites"
+                >
+                        Favorites : 
+                        1
+                </button>
+        </header>
+        <div
+                class="buttonContainer"
+        >
+                <button>
+                        People 
+                </button>
+                <button>
+                        Planets 
+                </button>
+                <button>
+                        Vehicles 
+                </button>
+        </div>
+        <div
+                class="cardDisplay"
+        >
+                <h3>
+                        Please select a category
+                </h3>
+        </div>
+</div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <header>
+            <h1>
+                        Swapibox
+            </h1>
+            <button
+                        className="favorites"
+                        onClick={[Function]}
+            >
+                         Favorites : 
+                        1
+                         
+            </button>
+</header>,
+          <div
+            className="buttonContainer"
+>
+            <button
+                        disabled={false}
+                        onClick={[Function]}
+            >
+                         People 
+            </button>
+            <button
+                        disabled={false}
+                        onClick={[Function]}
+            >
+                         Planets 
+            </button>
+            <button
+                        disabled={false}
+                        onClick={[Function]}
+            >
+                         Vehicles 
+            </button>
+</div>,
+          <CardDisplay
+            cards={Array []}
+            favorites={
+                        Array [
+                                    Object {
+                                      "name": "cam",
+                                    },
+                                  ]
+            }
+            toggleFavorite={[Function]}
+/>,
+        ],
+        "className": "mainPage",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <header>
+            <h1>
+                        Swapibox
+            </h1>
+            <button
+                        class="favorites"
+            >
+                        Favorites : 
+                        1
+            </button>
+</header>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1>
+                Swapibox
+</h1>,
+              <button
+                className="favorites"
+                onClick={[Function]}
+>
+                 Favorites : 
+                1
+                 
+</button>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <h1>
+                Swapibox
+</h1>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Swapibox",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Swapibox",
+              ],
+              "type": "h1",
+            },
+            Object {
+              "instance": <button
+                class="favorites"
+>
+                Favorites : 
+                1
+</button>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " Favorites : ",
+                  1,
+                  " ",
+                ],
+                "className": "favorites",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                " Favorites : ",
+                "1",
+                " ",
+              ],
+              "type": "button",
+            },
+          ],
+          "type": "header",
+        },
+        Object {
+          "instance": <div
+            class="buttonContainer"
+>
+            <button>
+                        People 
+            </button>
+            <button>
+                        Planets 
+            </button>
+            <button>
+                        Vehicles 
+            </button>
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <button
+                disabled={false}
+                onClick={[Function]}
+>
+                 People 
+</button>,
+              <button
+                disabled={false}
+                onClick={[Function]}
+>
+                 Planets 
+</button>,
+              <button
+                disabled={false}
+                onClick={[Function]}
+>
+                 Vehicles 
+</button>,
+            ],
+            "className": "buttonContainer",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <button>
+                People 
+</button>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " People ",
+                "disabled": false,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                " People ",
+              ],
+              "type": "button",
+            },
+            Object {
+              "instance": <button>
+                Planets 
+</button>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " Planets ",
+                "disabled": false,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                " Planets ",
+              ],
+              "type": "button",
+            },
+            Object {
+              "instance": <button>
+                Vehicles 
+</button>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " Vehicles ",
+                "disabled": false,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                " Vehicles ",
+              ],
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "cards": Array [],
+            "favorites": Array [
+              Object {
+                "name": "cam",
+              },
+            ],
+            "toggleFavorite": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": <div
+              class="cardDisplay"
+>
+              <h3>
+                            Please select a category
+              </h3>
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <h3>
+                Please select a category
+</h3>,
+              "className": "cardDisplay",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <h3>
+                  Please select a category
+</h3>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Please select a category",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Please select a category",
+                ],
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "cards": Array [],
+        "displayFavorites": [Function],
+        "displayedCategory": null,
+        "favorites": Array [
+          Object {
+            "name": "cam",
+          },
+        ],
+        "findPeople": [Function],
+        "findPlanets": [Function],
+        "findVehicles": [Function],
+        "toggleFavorite": [Function],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="mainPage"
+>
+          <header>
+                    <h1>
+                              Swapibox
+                    </h1>
+                    <button
+                              class="favorites"
+                    >
+                              Favorites : 
+                              1
+                    </button>
+          </header>
+          <div
+                    class="buttonContainer"
+          >
+                    <button>
+                              People 
+                    </button>
+                    <button>
+                              Planets 
+                    </button>
+                    <button>
+                              Vehicles 
+                    </button>
+          </div>
+          <div
+                    class="cardDisplay"
+          >
+                    <h3>
+                              Please select a category
+                    </h3>
+          </div>
+</div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <header>
+              <h1>
+                            Swapibox
+              </h1>
+              <button
+                            className="favorites"
+                            onClick={[Function]}
+              >
+                             Favorites : 
+                            1
+                             
+              </button>
+</header>,
+            <div
+              className="buttonContainer"
+>
+              <button
+                            disabled={false}
+                            onClick={[Function]}
+              >
+                             People 
+              </button>
+              <button
+                            disabled={false}
+                            onClick={[Function]}
+              >
+                             Planets 
+              </button>
+              <button
+                            disabled={false}
+                            onClick={[Function]}
+              >
+                             Vehicles 
+              </button>
+</div>,
+            <CardDisplay
+              cards={Array []}
+              favorites={
+                            Array [
+                                          Object {
+                                            "name": "cam",
+                                          },
+                                        ]
+              }
+              toggleFavorite={[Function]}
+/>,
+          ],
+          "className": "mainPage",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <header>
+              <h1>
+                            Swapibox
+              </h1>
+              <button
+                            class="favorites"
+              >
+                            Favorites : 
+                            1
+              </button>
+</header>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h1>
+                  Swapibox
+</h1>,
+                <button
+                  className="favorites"
+                  onClick={[Function]}
+>
+                   Favorites : 
+                  1
+                   
+</button>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <h1>
+                  Swapibox
+</h1>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Swapibox",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Swapibox",
+                ],
+                "type": "h1",
+              },
+              Object {
+                "instance": <button
+                  class="favorites"
+>
+                  Favorites : 
+                  1
+</button>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " Favorites : ",
+                    1,
+                    " ",
+                  ],
+                  "className": "favorites",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " Favorites : ",
+                  "1",
+                  " ",
+                ],
+                "type": "button",
+              },
+            ],
+            "type": "header",
+          },
+          Object {
+            "instance": <div
+              class="buttonContainer"
+>
+              <button>
+                            People 
+              </button>
+              <button>
+                            Planets 
+              </button>
+              <button>
+                            Vehicles 
+              </button>
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <button
+                  disabled={false}
+                  onClick={[Function]}
+>
+                   People 
+</button>,
+                <button
+                  disabled={false}
+                  onClick={[Function]}
+>
+                   Planets 
+</button>,
+                <button
+                  disabled={false}
+                  onClick={[Function]}
+>
+                   Vehicles 
+</button>,
+              ],
+              "className": "buttonContainer",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <button>
+                  People 
+</button>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": " People ",
+                  "disabled": false,
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " People ",
+                ],
+                "type": "button",
+              },
+              Object {
+                "instance": <button>
+                  Planets 
+</button>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": " Planets ",
+                  "disabled": false,
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " Planets ",
+                ],
+                "type": "button",
+              },
+              Object {
+                "instance": <button>
+                  Vehicles 
+</button>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": " Vehicles ",
+                  "disabled": false,
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " Vehicles ",
+                ],
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "cards": Array [],
+              "favorites": Array [
+                Object {
+                  "name": "cam",
+                },
+              ],
+              "toggleFavorite": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": <div
+                class="cardDisplay"
+>
+                <h3>
+                                Please select a category
+                </h3>
+</div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <h3>
+                  Please select a category
+</h3>,
+                "className": "cardDisplay",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <h3>
+                    Please select a category
+</h3>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Please select a category",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Please select a category",
+                  ],
+                  "type": "h3",
+                },
+              ],
+              "type": "div",
+            },
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
