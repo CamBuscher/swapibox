@@ -1,0 +1,482 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OpeningCrawl matches snapshot 1`] = `
+ReactWrapper {
+  "length": 1,
+  Symbol(enzyme.__unrendered__): <OpeningCrawl
+    closeCrawl={[Function]}
+    crawlInfo={
+        Object {
+            "crawl": "blah blah blah",
+            "release_date": 1234,
+            "title": "hello world",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "closeCrawl": [Function],
+      "crawlInfo": Object {
+        "crawl": "blah blah blah",
+        "release_date": 1234,
+        "title": "hello world",
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <section
+        class="star-wars"
+>
+        <button
+                class="stop-crawl"
+        >
+                Exit
+        </button>
+        <div
+                class="crawl"
+        >
+                <h4>
+                        blah blah blah
+                </h4>
+                <div
+                        class="title"
+                >
+                        <p>
+                                hello world
+                        </p>
+                        <p>
+                                Release date: 
+                                1234
+                        </p>
+                </div>
+        </div>
+</section>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="stop-crawl"
+            onClick={[Function]}
+>
+            Exit
+</button>,
+          <div
+            className="crawl"
+>
+            <h4>
+                        blah blah blah
+            </h4>
+            <div
+                        className="title"
+            >
+                        <p>
+                                    hello world
+                        </p>
+                        <p>
+                                    Release date: 
+                                    1234
+                        </p>
+            </div>
+</div>,
+        ],
+        "className": "star-wars",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <button
+            class="stop-crawl"
+>
+            Exit
+</button>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Exit",
+            "className": "stop-crawl",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Exit",
+          ],
+          "type": "button",
+        },
+        Object {
+          "instance": <div
+            class="crawl"
+>
+            <h4>
+                        blah blah blah
+            </h4>
+            <div
+                        class="title"
+            >
+                        <p>
+                                    hello world
+                        </p>
+                        <p>
+                                    Release date: 
+                                    1234
+                        </p>
+            </div>
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h4>
+                blah blah blah
+</h4>,
+              <div
+                className="title"
+>
+                <p>
+                                hello world
+                </p>
+                <p>
+                                Release date: 
+                                1234
+                </p>
+</div>,
+            ],
+            "className": "crawl",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <h4>
+                blah blah blah
+</h4>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "blah blah blah",
+              },
+              "ref": null,
+              "rendered": Array [
+                "blah blah blah",
+              ],
+              "type": "h4",
+            },
+            Object {
+              "instance": <div
+                class="title"
+>
+                <p>
+                                hello world
+                </p>
+                <p>
+                                Release date: 
+                                1234
+                </p>
+</div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    hello world
+</p>,
+                  <p>
+                    Release date: 
+                    1234
+</p>,
+                ],
+                "className": "title",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <p>
+                    hello world
+</p>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "hello world",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "hello world",
+                  ],
+                  "type": "p",
+                },
+                Object {
+                  "instance": <p>
+                    Release date: 
+                    1234
+</p>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Release date: ",
+                      1234,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Release date: ",
+                    "1234",
+                  ],
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "section",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "closeCrawl": [Function],
+        "crawlInfo": Object {
+          "crawl": "blah blah blah",
+          "release_date": 1234,
+          "title": "hello world",
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <section
+          class="star-wars"
+>
+          <button
+                    class="stop-crawl"
+          >
+                    Exit
+          </button>
+          <div
+                    class="crawl"
+          >
+                    <h4>
+                              blah blah blah
+                    </h4>
+                    <div
+                              class="title"
+                    >
+                              <p>
+                                        hello world
+                              </p>
+                              <p>
+                                        Release date: 
+                                        1234
+                              </p>
+                    </div>
+          </div>
+</section>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <button
+              className="stop-crawl"
+              onClick={[Function]}
+>
+              Exit
+</button>,
+            <div
+              className="crawl"
+>
+              <h4>
+                            blah blah blah
+              </h4>
+              <div
+                            className="title"
+              >
+                            <p>
+                                          hello world
+                            </p>
+                            <p>
+                                          Release date: 
+                                          1234
+                            </p>
+              </div>
+</div>,
+          ],
+          "className": "star-wars",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <button
+              class="stop-crawl"
+>
+              Exit
+</button>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Exit",
+              "className": "stop-crawl",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Exit",
+            ],
+            "type": "button",
+          },
+          Object {
+            "instance": <div
+              class="crawl"
+>
+              <h4>
+                            blah blah blah
+              </h4>
+              <div
+                            class="title"
+              >
+                            <p>
+                                          hello world
+                            </p>
+                            <p>
+                                          Release date: 
+                                          1234
+                            </p>
+              </div>
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h4>
+                  blah blah blah
+</h4>,
+                <div
+                  className="title"
+>
+                  <p>
+                                    hello world
+                  </p>
+                  <p>
+                                    Release date: 
+                                    1234
+                  </p>
+</div>,
+              ],
+              "className": "crawl",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <h4>
+                  blah blah blah
+</h4>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "blah blah blah",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "blah blah blah",
+                ],
+                "type": "h4",
+              },
+              Object {
+                "instance": <div
+                  class="title"
+>
+                  <p>
+                                    hello world
+                  </p>
+                  <p>
+                                    Release date: 
+                                    1234
+                  </p>
+</div>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p>
+                      hello world
+</p>,
+                    <p>
+                      Release date: 
+                      1234
+</p>,
+                  ],
+                  "className": "title",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <p>
+                      hello world
+</p>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "hello world",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "hello world",
+                    ],
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": <p>
+                      Release date: 
+                      1234
+</p>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "Release date: ",
+                        1234,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Release date: ",
+                      "1234",
+                    ],
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "section",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

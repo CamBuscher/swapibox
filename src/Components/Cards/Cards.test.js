@@ -100,7 +100,7 @@ describe('Card components', () => {
     });
 
     it('matches snapshot', () => {
-      expect(wrapper).toMatchSnapshot()
+      expect(wrapper).toMatchSnapshot();
     });
 
     it('should have an icon with class of favorite if it is a favorite', () => {
