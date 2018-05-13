@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const PlanetCard = ({planet, toggleFavorite, isFavorite}) => {
   const favoriteIcon = isFavorite ?
-    <img src='/images/fullStar.png' className='favoriteIcon' title='Click to remove from favoritesClick to add to favorites' onClick={() => toggleFavorite(planet)} /> 
+    <img src='/images/fullStar.png' className='favoriteIcon favorite' title='Click to remove from favoritesClick to add to favorites notFavorite' onClick={() => toggleFavorite(planet)} /> 
     :
     <img src='/images/star.png' className='favoriteIcon' title='Click to add to favorites' onClick={() => toggleFavorite(planet)} />;
 

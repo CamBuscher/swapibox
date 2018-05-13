@@ -45,4 +45,43 @@ describe('Card components', () => {
       expect(wrapper.prop('toggleFavorite')).toHaveBeenCalledWith({name: 'onyx'});
     });
   });
+
+  describe('VehicleCard', () => {
+    let wrapper;
+    let mockProps;
+
+    beforeEach(() => {
+      mockProps = {
+        vehicle: { name: 'prius' },
+        toggleFavorite: jest.fn(),
+        isFavorite: false
+      };
+      wrapper = mount(<VehicleCard {...mockProps} />);
+    });
+
+    it('matches snapshot', () => {
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should have an icon with class of favorite if it is a favorite', () => {
+      wrapper = shallow(<VehicleCard {...mockProps} isFavorite={true} />);
+
+      const icon = wrapper.find('div').find('img')
+      expect(icon.hasClass('favorite')).toBe(true);
+    });
+
+    it('should have an icon with class of notFavorite if it is not a favorite', () => {
+      wrapper = shallow(<VehicleCard {...mockProps} />);
+
+      const icon = wrapper.find('div').find('img');
+      expect(icon.hasClass('notFavorite')).toBe(true);
+    });
+
+    it('should call toggleFavorite with person as a param when icon is clicked', () => {
+      const icon = wrapper.find('div').find('img');
+      icon.simulate('click');
+
+      expect(wrapper.prop('toggleFavorite')).toHaveBeenCalledWith({ name: 'prius' });
+    });
+  })
 });

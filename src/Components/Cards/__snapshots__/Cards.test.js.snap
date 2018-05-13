@@ -323,3 +323,351 @@ ReactWrapper {
   },
 }
 `;
+
+exports[`Card components VehicleCard matches snapshot 1`] = `
+ReactWrapper {
+  "length": 1,
+  Symbol(enzyme.__unrendered__): <VehicleCard
+    isFavorite={false}
+    toggleFavorite={[Function]}
+    vehicle={
+        Object {
+            "name": "prius",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "isFavorite": false,
+      "toggleFavorite": [Function],
+      "vehicle": Object {
+        "name": "prius",
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="card vehiclesCard"
+>
+        <h3>
+                prius
+        </h3>
+        <h5>
+                Model: 
+        </h5>
+        <img
+                src="/images/star.png"
+                class="favoriteIcon notFavorite"
+                title="Click to add to favorites"
+        />
+        <p>
+                Number of passengers: 
+        </p>
+        <p>
+                Class: 
+        </p>
+</div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            prius
+</h3>,
+          <h5>
+            Model: 
+</h5>,
+          <img
+            className="favoriteIcon notFavorite"
+            onClick={[Function]}
+            src="/images/star.png"
+            title="Click to add to favorites"
+/>,
+          <p>
+            Number of passengers: 
+</p>,
+          <p>
+            Class: 
+             
+</p>,
+        ],
+        "className": "card vehiclesCard",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <h3>
+            prius
+</h3>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "prius",
+          },
+          "ref": null,
+          "rendered": Array [
+            "prius",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": <h5>
+            Model: 
+</h5>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Model: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Model: ",
+          ],
+          "type": "h5",
+        },
+        Object {
+          "instance": <img
+            src="/images/star.png"
+            class="favoriteIcon notFavorite"
+            title="Click to add to favorites"
+/>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "favoriteIcon notFavorite",
+            "onClick": [Function],
+            "src": "/images/star.png",
+            "title": "Click to add to favorites",
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+          ],
+          "type": "img",
+        },
+        Object {
+          "instance": <p>
+            Number of passengers: 
+</p>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Number of passengers: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Number of passengers: ",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": <p>
+            Class: 
+</p>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Class: ",
+              undefined,
+              " ",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Class: ",
+            " ",
+          ],
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "isFavorite": false,
+        "toggleFavorite": [Function],
+        "vehicle": Object {
+          "name": "prius",
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="card vehiclesCard"
+>
+          <h3>
+                    prius
+          </h3>
+          <h5>
+                    Model: 
+          </h5>
+          <img
+                    src="/images/star.png"
+                    class="favoriteIcon notFavorite"
+                    title="Click to add to favorites"
+          />
+          <p>
+                    Number of passengers: 
+          </p>
+          <p>
+                    Class: 
+          </p>
+</div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3>
+              prius
+</h3>,
+            <h5>
+              Model: 
+</h5>,
+            <img
+              className="favoriteIcon notFavorite"
+              onClick={[Function]}
+              src="/images/star.png"
+              title="Click to add to favorites"
+/>,
+            <p>
+              Number of passengers: 
+</p>,
+            <p>
+              Class: 
+               
+</p>,
+          ],
+          "className": "card vehiclesCard",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <h3>
+              prius
+</h3>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "prius",
+            },
+            "ref": null,
+            "rendered": Array [
+              "prius",
+            ],
+            "type": "h3",
+          },
+          Object {
+            "instance": <h5>
+              Model: 
+</h5>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Model: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Model: ",
+            ],
+            "type": "h5",
+          },
+          Object {
+            "instance": <img
+              src="/images/star.png"
+              class="favoriteIcon notFavorite"
+              title="Click to add to favorites"
+/>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "favoriteIcon notFavorite",
+              "onClick": [Function],
+              "src": "/images/star.png",
+              "title": "Click to add to favorites",
+            },
+            "ref": null,
+            "rendered": Array [
+              undefined,
+            ],
+            "type": "img",
+          },
+          Object {
+            "instance": <p>
+              Number of passengers: 
+</p>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Number of passengers: ",
+                undefined,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Number of passengers: ",
+            ],
+            "type": "p",
+          },
+          Object {
+            "instance": <p>
+              Class: 
+</p>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Class: ",
+                undefined,
+                " ",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Class: ",
+              " ",
+            ],
+            "type": "p",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
