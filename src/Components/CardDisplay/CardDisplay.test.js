@@ -44,4 +44,14 @@ describe('CardDisplay', () => {
     const card = wrapper.find('div').find('div.card')
     expect(card.hasClass('vehiclesCard')).toBe(true)
   });
+
+  it('should render a planetCard if given correct prop', () => {
+    wrapper = mount(<CardDisplay
+      {...mockProps}
+      cards={[{ name: 'Car', residents: ['spock'] }]}
+    />);
+
+    const card = wrapper.find('div').find('div.card');
+    expect(card.hasClass('planetsCard')).toBe(true);
+  });
 });
