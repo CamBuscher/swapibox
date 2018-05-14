@@ -14,3 +14,8 @@
   color: #feda4a;
   font-size: 16px;
 }
+
+.mainPage button:disabled {
+  background-color: #feda4a50;
+  cursor: inherit;
+}
