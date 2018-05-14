@@ -1,4 +1,26 @@
 .mainPage h1 {
   margin-top: 0px;
   color: #feda4a;
+  font-size: 60px;
+}
+
+.mainPage h3 {
+  color: #feda4a;
+  font-size: 20px;
+}
+
+.mainPage button {
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  margin: 10px;
+  border: 2px solid #feda4a;
+  background-color: transparent;
+  color: #feda4a;
+  font-size: 16px;
+}
+
+.mainPage button:disabled {
+  background-color: #feda4a50;
+  cursor: inherit;
 }

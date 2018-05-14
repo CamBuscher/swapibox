@@ -12,7 +12,7 @@ const PlanetCard = ({planet, toggleFavorite, isFavorite}) => {
       return <div>
         <p>Notable residents:</p>
         <ul>
-          {planet.residents.map((resident, index) => <li key={`${index} resident`}>{resident}</li>)};
+          {planet.residents.map((resident, index) => <li key={`${index} resident`}>{resident}</li>)}
         </ul>
       </div>;
     } else {

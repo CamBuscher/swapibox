@@ -1,5 +1,5 @@
 .cardDisplay {
-  width: 80%;
+  width: 85%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -14,9 +14,11 @@
 
 .card {
   margin: 10px 0px;
+  padding-top: 10px;
   border: 1px solid #feda4a;
   background-color: #ffffff50;
   width: 200px;
+  color: #feda4a
 }
 
 .card .favoriteIcon {
