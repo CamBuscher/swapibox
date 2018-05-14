@@ -391,7 +391,6 @@ ReactWrapper {
                         <li>
                                 cam
                         </li>
-                        ;
                 </ul>
         </div>
 </div>,
@@ -425,7 +424,6 @@ ReactWrapper {
                         <li>
                                     cam
                         </li>
-                        ;
             </ul>
 </div>,
         ],
@@ -531,7 +529,6 @@ ReactWrapper {
                         <li>
                                     cam
                         </li>
-                        ;
             </ul>
 </div>,
           "key": undefined,
@@ -545,7 +542,6 @@ ReactWrapper {
                 <li>
                                 cam
                 </li>
-                ;
 </ul>,
             ],
           },
@@ -571,18 +567,14 @@ ReactWrapper {
                 <li>
                                 cam
                 </li>
-                ;
 </ul>,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  Array [
-                    <li>
-                      cam
+                  <li>
+                    cam
 </li>,
-                  ],
-                  ";",
                 ],
               },
               "ref": null,
@@ -602,7 +594,6 @@ ReactWrapper {
                   ],
                   "type": "li",
                 },
-                ";",
               ],
               "type": "ul",
             },
@@ -659,7 +650,6 @@ ReactWrapper {
                               <li>
                                         cam
                               </li>
-                              ;
                     </ul>
           </div>
 </div>,
@@ -693,7 +683,6 @@ ReactWrapper {
                             <li>
                                           cam
                             </li>
-                            ;
               </ul>
 </div>,
           ],
@@ -799,7 +788,6 @@ ReactWrapper {
                             <li>
                                           cam
                             </li>
-                            ;
               </ul>
 </div>,
             "key": undefined,
@@ -813,7 +801,6 @@ ReactWrapper {
                   <li>
                                     cam
                   </li>
-                  ;
 </ul>,
               ],
             },
@@ -839,18 +826,14 @@ ReactWrapper {
                   <li>
                                     cam
                   </li>
-                  ;
 </ul>,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    Array [
-                      <li>
-                        cam
+                    <li>
+                      cam
 </li>,
-                    ],
-                    ";",
                   ],
                 },
                 "ref": null,
@@ -870,7 +853,6 @@ ReactWrapper {
                     ],
                     "type": "li",
                   },
-                  ";",
                 ],
                 "type": "ul",
               },

@@ -19,7 +19,7 @@ describe('MainPage', () => {
       displayedCategory: null
     };
     wrapper = mount(<MainPage {...mockProps} />);
-  })
+  });
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();

@@ -9,7 +9,7 @@ describe('CardDisplay', () => {
     cards: [{ name: 'cam' }],
     toggleFavorite: jest.fn(),
     favorites: [{ name: 'cam' }]
-  }
+  };
 
   beforeEach(() => {
     wrapper = mount(<CardDisplay {...mockProps}/>);
@@ -30,7 +30,7 @@ describe('CardDisplay', () => {
       cards={[{name: 'Cam', homeworld: 'Earth' }]}
     />);
     
-    const card = wrapper.find('div').find('div.card')
+    const card = wrapper.find('div').find('div.card');
     expect(card.hasClass('peopleCard')).toBe(true);
   });
 
@@ -40,8 +40,8 @@ describe('CardDisplay', () => {
       cards={[{ name: 'Car', class: 'economy' }]}
     />);
 
-    const card = wrapper.find('div').find('div.card')
-    expect(card.hasClass('vehiclesCard')).toBe(true)
+    const card = wrapper.find('div').find('div.card');
+    expect(card.hasClass('vehiclesCard')).toBe(true);
   });
 
   it('should render a planetCard if given correct prop', () => {

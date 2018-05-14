@@ -8,7 +8,7 @@ import './CardDisplay.css';
 const CardDisplay = ({cards, toggleFavorite, favorites}) => {
   const displayedCards = cards.map((card, index) => {
     return determineCardType(card, index);
-  })
+  });
 
   function determineCardType(card, index) {
     const isFavorite = favorites.find(favorite => favorite.name === card.name) ? true : false;

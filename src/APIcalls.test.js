@@ -75,7 +75,7 @@ describe('callPeopleEndpoint', () => {
     const expected = [{ homeworld: undefined, homeworldPop: undefined, species: undefined, name: undefined }];
     
     expect(result).toEqual(expected);
-  })
+  });
 
   it('throws an error if the fetch call is rejected', async () => {
     window.fetch = jest.fn().mockImplementation((() => Promise.resolve({ status: 500 })));
@@ -120,7 +120,7 @@ describe('callPlanetsEndpoint', () => {
     const expected = arrayOfPlanets;
 
     expect(result).toEqual(expected);
-  })
+  });
 
   it('throws an error if the fetch call is rejected', async () => {
     window.fetch = jest.fn().mockImplementation((() => Promise.resolve({ status: 500 })));

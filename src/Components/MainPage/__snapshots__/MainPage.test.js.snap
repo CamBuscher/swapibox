@@ -60,6 +60,7 @@ ReactWrapper {
                         Favorites : 
                         1
                 </button>
+                <div />
         </header>
         <div
                 class="buttonContainer"
@@ -92,12 +93,14 @@ ReactWrapper {
             </h1>
             <button
                         className="favorites"
+                        disabled={false}
                         onClick={[Function]}
             >
                          Favorites : 
                         1
                          
             </button>
+            <div />
 </header>,
           <div
             className="buttonContainer"
@@ -148,6 +151,7 @@ ReactWrapper {
                         Favorites : 
                         1
             </button>
+            <div />
 </header>,
           "key": undefined,
           "nodeType": "host",
@@ -158,12 +162,14 @@ ReactWrapper {
 </h1>,
               <button
                 className="favorites"
+                disabled={false}
                 onClick={[Function]}
 >
                  Favorites : 
                 1
                  
 </button>,
+              <div />,
             ],
           },
           "ref": null,
@@ -199,6 +205,7 @@ ReactWrapper {
                   " ",
                 ],
                 "className": "favorites",
+                "disabled": false,
                 "onClick": [Function],
               },
               "ref": null,
@@ -208,6 +215,17 @@ ReactWrapper {
                 " ",
               ],
               "type": "button",
+            },
+            Object {
+              "instance": <div />,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {},
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "div",
             },
           ],
           "type": "header",
@@ -398,6 +416,7 @@ ReactWrapper {
                               Favorites : 
                               1
                     </button>
+                    <div />
           </header>
           <div
                     class="buttonContainer"
@@ -430,12 +449,14 @@ ReactWrapper {
               </h1>
               <button
                             className="favorites"
+                            disabled={false}
                             onClick={[Function]}
               >
                              Favorites : 
                             1
                              
               </button>
+              <div />
 </header>,
             <div
               className="buttonContainer"
@@ -486,6 +507,7 @@ ReactWrapper {
                             Favorites : 
                             1
               </button>
+              <div />
 </header>,
             "key": undefined,
             "nodeType": "host",
@@ -496,12 +518,14 @@ ReactWrapper {
 </h1>,
                 <button
                   className="favorites"
+                  disabled={false}
                   onClick={[Function]}
 >
                    Favorites : 
                   1
                    
 </button>,
+                <div />,
               ],
             },
             "ref": null,
@@ -537,6 +561,7 @@ ReactWrapper {
                     " ",
                   ],
                   "className": "favorites",
+                  "disabled": false,
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -546,6 +571,17 @@ ReactWrapper {
                   " ",
                 ],
                 "type": "button",
+              },
+              Object {
+                "instance": <div />,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {},
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "div",
               },
             ],
             "type": "header",
