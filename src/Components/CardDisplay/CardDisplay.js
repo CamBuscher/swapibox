@@ -33,7 +33,7 @@ const CardDisplay = ({cards, toggleFavorite, favorites}) => {
 }; 
 
 CardDisplay.propTypes = {
-  cards: PropTypes.array.isrequired,
+  cards: PropTypes.array,
   toggleFavorite: PropTypes.func.isRequired,
   favorites: PropTypes.array.isRequired
 };

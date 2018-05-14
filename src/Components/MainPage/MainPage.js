@@ -43,7 +43,7 @@ MainPage.propTypes = {
   findVehicles: PropTypes.func.isRequired,
   cards: PropTypes.array.isRequired,
   toggleFavorite: PropTypes.func.isRequired,
-  displayedCategory: PropTypes.string.isRequired
+  displayedCategory: PropTypes.string
 };
 
 export default MainPage;
