@@ -5,8 +5,8 @@ import Loading from './Loading';
 
 describe('Loading', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<Loading />)
+    const wrapper = shallow(<Loading />);
 
-    expect(wrapper).toMatchSnapshot()
-  })
-})
+    expect(wrapper).toMatchSnapshot();
+  });
+});

@@ -16,8 +16,8 @@ describe('Card components', () => {
         person: {name: 'onyx'},
         toggleFavorite: jest.fn(),
         isFavorite: false
-      }
-      wrapper = mount(<PeopleCard {...mockProps}/>)
+      };
+      wrapper = mount(<PeopleCard {...mockProps}/>);
     });
 
     it('matches snapshot', () => {
@@ -27,14 +27,14 @@ describe('Card components', () => {
     it('should have an icon with class of favorite if it is a favorite', () => {
       wrapper = shallow(<PeopleCard {...mockProps} isFavorite={true} />);
 
-      const icon = wrapper.find('div').find('img')
+      const icon = wrapper.find('div').find('img');
       expect(icon.hasClass('favorite')).toBe(true);
     });
 
     it('should have an icon with class of notFavorite if it is not a favorite', () => {
       wrapper = shallow(<PeopleCard {...mockProps}/>);
 
-      const icon = wrapper.find('div').find('img')
+      const icon = wrapper.find('div').find('img');
       expect(icon.hasClass('notFavorite')).toBe(true);
     });
 
@@ -66,7 +66,7 @@ describe('Card components', () => {
     it('should have an icon with class of favorite if it is a favorite', () => {
       wrapper = shallow(<VehicleCard {...mockProps} isFavorite={true} />);
 
-      const icon = wrapper.find('div').find('img')
+      const icon = wrapper.find('div').find('img');
       expect(icon.hasClass('favorite')).toBe(true);
     });
 
@@ -83,7 +83,7 @@ describe('Card components', () => {
 
       expect(wrapper.prop('toggleFavorite')).toHaveBeenCalledWith({ name: 'prius' });
     });
-  })
+  });
   
   describe('PlanetCard', () => {
     let wrapper;
