@@ -8,23 +8,17 @@ const MainPage = ({ favorites, displayFavorites, findPeople, findPlanets, findVe
     return category === displayedCategory ? true : false;
   };
 
-  const favoritesButton = () => {
-    return displayedCategory === 'favorites' ? 
-      <button className="favorites" onClick={displayFavorites} disabled> Favorites : {favorites.length} </button> : 
-      <button className="favorites" onClick={displayFavorites}> Favorites : {favorites.length} </button>;
-  };
-
   const favoritesReminder = () => {
     return displayedCategory === 'favorites' && favorites.length === 0 ?
       <h3>You don't have any favorites yet!</h3> :
-      <div></div>
+      <div></div>;
   };
 
   return (
     <div className='mainPage'>
       <header>
         <h1>Swapibox</h1>
-        {favoritesButton()}
+        <button className="favorites" onClick={displayFavorites} disabled={disabledCheck('favorites')}> Favorites : {favorites.length} </button>
         {favoritesReminder()}
       </header>
       <div className='buttonContainer'>
